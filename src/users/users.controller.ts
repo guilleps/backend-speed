@@ -14,6 +14,7 @@ import { UsersService } from './users.service';
 import { CreateUserDto } from './create-user.dto';
 import { User } from './user.entity';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
+import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
 
 @Controller('users')
 @UsePipes(ValidationPipe)
@@ -22,7 +23,9 @@ export class UsersController {
 
   @Post()
   @UseGuards(JwtGuard)
-  create(@Body() dto: CreateUserDto) {
+  create(@Body() dto: CreateUserDto, @CurrentCompany() company) {
+    console.log('Current Company:', company); 
+    dto.companyId = company.companyId;
     return this.service.create(dto);
   }
 

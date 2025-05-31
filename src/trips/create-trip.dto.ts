@@ -1,9 +1,8 @@
-import { IsEnum, IsString } from 'class-validator';
+import { IsEnum, IsOptional, IsString, IsUUID } from 'class-validator';
 import { Status } from './trip.entity';
+import { UUID } from 'crypto';
 
 export class CreateTripDto {
-  @IsEnum(Status)
-  status: Status;
 
   @IsString()
   startDate: string;
@@ -11,12 +10,19 @@ export class CreateTripDto {
   @IsString()
   endDate: string;
 
-  @IsString()
-  source: string;
+  @IsUUID()
+  origin: UUID;
+
+  @IsUUID()
+  destination: UUID;
+
+  @IsEnum(Status)
+  status: Status;
 
   @IsString()
-  destination: string;
+  userId?: string;
 
   @IsString()
-  userId: string;
+  @IsOptional()
+  companyId?: string;
 }

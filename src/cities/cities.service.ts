@@ -16,6 +16,10 @@ export class CitiesService {
     return this.repo.find();
   }
 
+  findByCompanyId(companyId: string) {
+    return this.repo.find({ where: { companyId } });
+  }
+
   findOne(id: string) {
     return this.repo.findOneBy({ id });
   }

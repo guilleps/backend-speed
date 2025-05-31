@@ -6,23 +6,32 @@ import {
   Param,
   Patch,
   Post,
+  UseGuards,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { CitiesService } from './cities.service';
 import { CreateCityDto } from './create-city.dto';
 import { City } from './city.entity';
+import { JwtGuard } from 'src/auth/jwt/jwt.guard';
+import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
 
 @Controller('cities')
+@UsePipes(ValidationPipe)
 export class CitiesController {
   constructor(private readonly service: CitiesService) {}
 
   @Post()
-  create(@Body() dto: CreateCityDto) {
+  @UseGuards(JwtGuard)
+  create(@Body() dto: CreateCityDto, @CurrentCompany() company) {
+    dto.companyId = company.companyId;
     return this.service.create(dto);
   }
 
   @Get()
-  findAll() {
-    return this.service.findAll();
+  @UseGuards(JwtGuard)
+  findAll(@CurrentCompany() company) {
+    return this.service.findByCompanyId(company.companyId);
   }
 
   @Get(':id')

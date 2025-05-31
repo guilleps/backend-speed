@@ -6,7 +6,6 @@ import { UsersModule } from './users/users.module';
 import { CompaniesModule } from './companies/companies.module';
 import { TripsModule } from './trips/trips.module';
 import { CitiesModule } from './cities/cities.module';
-import { SubsidiariesModule } from './subsidiaries/subsidiaries.module';
 import { ReportsModule } from './reports/reports.module';
 import { DetailsModule } from './details/details.module';
 import { AuthModule } from './auth/auth.module';
@@ -27,7 +26,6 @@ import { AuthModule } from './auth/auth.module';
     CompaniesModule,
     TripsModule,
     CitiesModule,
-    SubsidiariesModule,
     ReportsModule,
     DetailsModule,
     AuthModule,

@@ -7,4 +7,7 @@ export class City {
 
   @Column()
   name: string;
+
+  @Column()
+  companyId: string;
 }

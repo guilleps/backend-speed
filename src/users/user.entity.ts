@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Trip } from 'src/trips/trip.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 export enum UserRole {
   CONDUCTOR = 'CONDUCTOR',
@@ -23,4 +24,7 @@ export class User {
 
   @Column()
   companyId: string;
+
+  @OneToMany(() => Trip, (trip) => trip.user)
+  trips: Trip[];
 }

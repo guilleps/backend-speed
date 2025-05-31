@@ -7,7 +7,7 @@ export class UserMapper {
     user.name = dto.name;
     user.email = dto.email;
     user.password = dto.password;
-    user.companyId = dto.companyId;
+    if(dto.companyId) user.companyId = dto.companyId;
     user.role = dto.role;
     return user;
   }

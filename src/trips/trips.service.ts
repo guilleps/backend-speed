@@ -2,13 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Trip } from './trip.entity';
 import { Repository } from 'typeorm';
+import { CreateTripDto } from './create-trip.dto';
+import { TripMapper } from './trip.mappers';
 
 @Injectable()
 export class TripsService {
   constructor(@InjectRepository(Trip) private repo: Repository<Trip>) {}
 
-  create(data: Partial<Trip>) {
-    const trip = this.repo.create(data);
+  create(data: CreateTripDto) {
+    const trip = TripMapper.toEntity(data);
     return this.repo.save(trip);
   }
 
