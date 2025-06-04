@@ -16,4 +16,8 @@ export class Detail {
 
   @Column()
   effectiveness: string;
+  description: any;
+  location: any;
+  speed: any;
+  timestamp: any;
 }

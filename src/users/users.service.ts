@@ -4,13 +4,16 @@ import { User } from './user.entity';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './create-user.dto';
 import { UserMapper } from './user.mappers';
+import * as bcrypt from "bcrypt";
 
 @Injectable()
 export class UsersService {
   constructor(@InjectRepository(User) private repo: Repository<User>) {}
 
-  create(dto: CreateUserDto) {
+  async create(dto: CreateUserDto) {
     const user = UserMapper.toEntity(dto);
+    const salt = await bcrypt.genSalt();
+    user.password = await bcrypt.hash(dto.password, salt);
     return this.repo.save(user);
   }
 

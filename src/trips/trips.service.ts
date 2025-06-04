@@ -9,9 +9,9 @@ import { TripMapper } from './trip.mappers';
 export class TripsService {
   constructor(@InjectRepository(Trip) private repo: Repository<Trip>) {}
 
-  create(data: CreateTripDto) {
+  async create(data: CreateTripDto) {
     const trip = TripMapper.toEntity(data);
-    return this.repo.save(trip);
+    return await this.repo.save(trip);
   }
 
   findAll() {

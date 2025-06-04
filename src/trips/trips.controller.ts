@@ -13,10 +13,10 @@ import {
 import { TripsService } from './trips.service';
 import { CreateTripDto } from './create-trip.dto';
 import { Trip } from './trip.entity';
-import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CitiesService } from 'src/cities/cities.service';
-import { JwtUserGuard } from 'src/auth/jwt/jwt-user.guard';
+import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
+import { JwtDriverGuard } from 'src/auth/jwt/jwt-driver.guard';
 
 @Controller('trips')
 @UseGuards(JwtGuard)
@@ -27,9 +27,8 @@ export class TripsController {
   ) { }
 
   @Post()
-  @UseGuards(JwtUserGuard)
-  async create(@Body() dto: CreateTripDto, @Request() req) {
-    const user = req.user;
+  @UseGuards(JwtDriverGuard)
+  async create(@Body() dto: CreateTripDto, @CurrentUser() user) {
     dto.userId = user.userId;
     dto.companyId = user.companyId;
   
@@ -47,9 +46,8 @@ export class TripsController {
   }
 
   @Get('available-cities')
-  async getAvailableCities(@CurrentCompany() company) {
-    // Devuelve solo ciudades de la empresa autenticada
-    return this.citiesService.findByCompanyId(company.companyId);
+  async getAvailableCities(@CurrentUser() user) {
+    return this.citiesService.findByCompanyId(user.companyId);
   }
 
   @Get()

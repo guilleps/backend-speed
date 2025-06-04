@@ -24,6 +24,7 @@ export class CitiesController {
   @Post()
   @UseGuards(JwtGuard)
   create(@Body() dto: CreateCityDto, @CurrentCompany() company) {
+    console.log('company', company);
     dto.companyId = company.companyId;
     return this.service.create(dto);
   }
