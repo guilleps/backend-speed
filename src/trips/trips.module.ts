@@ -6,10 +6,7 @@ import { Trip } from './trip.entity';
 import { CitiesModule } from 'src/cities/cities.module';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([Trip]),
-    CitiesModule
-  ],
+  imports: [TypeOrmModule.forFeature([Trip]), CitiesModule],
   controllers: [TripsController],
   providers: [TripsService],
 })

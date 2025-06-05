@@ -5,11 +5,13 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class CitiesService {
-  constructor(@InjectRepository(City) private repo: Repository<City>) {}
+  constructor(@InjectRepository(City) private repo: Repository<City>) { }
 
   create(data: Partial<City>) {
     const city = this.repo.create(data);
-    return this.repo.save(city);
+    this.repo.save(city);
+
+    return { id: city.id, name: city.name, address: city.address };
   }
 
   findAll() {

@@ -15,6 +15,7 @@ import { CreateUserDto } from './create-user.dto';
 import { User } from './user.entity';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 
 @Controller('users')
 @UsePipes(ValidationPipe)
@@ -23,8 +24,11 @@ export class UsersController {
 
   @Post()
   @UseGuards(JwtGuard)
-  create(@Body() dto: CreateUserDto, @CurrentCompany() company) {
-    console.log('Current Company:', company); 
+  create(
+    @Body() dto: CreateUserDto,
+    @CurrentCompany() company: AuthenticatedUser,
+  ) {
+    console.log('Current Company:', company);
     dto.companyId = company.companyId;
     return this.service.create(dto);
   }
@@ -46,6 +50,6 @@ export class UsersController {
 
   @Delete(':id')
   delete(@Param('id') id: string) {
-    return this.service.delete(+id);
+    return this.service.delete(id);
   }
 }

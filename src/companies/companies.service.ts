@@ -4,11 +4,15 @@ import { Repository } from 'typeorm';
 import { Company } from './company.entity';
 import { CreateCompanyDto } from './create-company.dto';
 import { CompanyMapper } from './companies.mappers';
-import * as bcrypt from "bcrypt";
+import * as bcrypt from 'bcrypt';
+import { User } from 'src/users/user.entity';
 
 @Injectable()
 export class CompaniesService {
-  constructor(@InjectRepository(Company) private repo: Repository<Company>) {}
+  constructor(
+    @InjectRepository(Company) private repo: Repository<Company>,
+    @InjectRepository(User) private userRepo: Repository<User>
+  ) { }
 
   async create(data: CreateCompanyDto) {
     const company = CompanyMapper.toEntity(data);
@@ -21,12 +25,29 @@ export class CompaniesService {
     return this.repo.find();
   }
 
-  findbyByEmail(email: string) {
-    return this.repo.findOneBy({ email })
+  findByEmail(email: string) {
+    return this.repo.findOneBy({ email });
   }
 
-  findOne(id: string) {
-    return this.repo.findOneBy({ id });
+  async findOne(id: string) {
+    const companyFounded = await this.repo.findOneBy({ id });
+
+    if (!companyFounded) return null;
+
+    return {
+      name: companyFounded.name,
+      ruc: companyFounded.ruc,
+      address: companyFounded.address,
+      phone: companyFounded.phone
+    }
+  }
+
+  countDriversByCompany(companyId: string): Promise<number> {
+    return this.userRepo.count({
+      where: {
+        company: { id: companyId }
+      },
+    });
   }
 
   update(id: number, data: Partial<Company>) {

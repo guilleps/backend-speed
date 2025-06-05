@@ -6,12 +6,15 @@ import {
   Param,
   Patch,
   Post,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { DetailsService } from './details.service';
 import { CreateDetailDto } from './create-detail.dto';
 import { Detail } from './detail.entity';
 
 @Controller('details')
+@UsePipes(ValidationPipe)
 export class DetailsController {
   constructor(private readonly service: DetailsService) {}
 
@@ -23,6 +26,11 @@ export class DetailsController {
   @Get()
   findAll() {
     return this.service.findAll();
+  }
+
+  @Get('by-trip/:tripId')
+  findByTripId(@Param('tripId') tripId: string) {
+    return this.service.findByTripId(tripId);
   }
 
   @Get(':id')

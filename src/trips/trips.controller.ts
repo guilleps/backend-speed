@@ -7,7 +7,6 @@ import {
   Param,
   Patch,
   Post,
-  Request,
   UseGuards,
 } from '@nestjs/common';
 import { TripsService } from './trips.service';
@@ -16,37 +15,32 @@ import { Trip } from './trip.entity';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CitiesService } from 'src/cities/cities.service';
 import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
-import { JwtDriverGuard } from 'src/auth/jwt/jwt-driver.guard';
+import { JwtUserGuard } from 'src/auth/jwt/jwt-user.guard';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 
 @Controller('trips')
-@UseGuards(JwtGuard)
 export class TripsController {
   constructor(
     private readonly service: TripsService,
-    private readonly citiesService: CitiesService
-  ) { }
+    private readonly citiesService: CitiesService,
+  ) {}
 
   @Post()
-  @UseGuards(JwtDriverGuard)
-  async create(@Body() dto: CreateTripDto, @CurrentUser() user) {
+  @UseGuards(JwtGuard, JwtUserGuard)
+  create(
+    @Body() dto: CreateTripDto,
+    @CurrentUser() user: AuthenticatedUser,
+  ) {    
     dto.userId = user.userId;
     dto.companyId = user.companyId;
-  
-    const companyCities = await this.citiesService.findByCompanyId(user.companyId);
-  
-    const originCity = companyCities.find(city => city.id === dto.origin);
-    const destinationCity = companyCities.find(city => city.id === dto.destination);
 
-    if (!originCity || !destinationCity) {
-      throw new BadRequestException('Origen o destino no pertenecen a las ciudades de la empresa');
-    }
+    this.citiesService.findByCompanyId(user.companyId);
 
-    // Crear el viaje
     return this.service.create(dto);
   }
 
   @Get('available-cities')
-  async getAvailableCities(@CurrentUser() user) {
+  getAvailableCities(@CurrentUser() user: AuthenticatedUser) {
     return this.citiesService.findByCompanyId(user.companyId);
   }
 

@@ -1,12 +1,11 @@
 import { IsEmail, IsString } from 'class-validator';
-import { Unique } from 'typeorm';
 
 export class CreateCompanyDto {
+  
   @IsString()
   name: string;
 
   @IsString()
-  @Unique(['ruc'])
   ruc: string;
 
   @IsString()
@@ -16,7 +15,6 @@ export class CreateCompanyDto {
   phone: string;
 
   @IsEmail()
-  @Unique(['email'])
   email: string;
 
   @IsString()

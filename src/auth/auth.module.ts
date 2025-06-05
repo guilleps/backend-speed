@@ -14,11 +14,11 @@ import { JwtUserStrategy } from './jwt/jwt-strategy/jwt-user-strategy.service';
     forwardRef(() => UsersModule),
     JwtModule.register({
       secret: process.env.JWT_SECRET || 'jwt_secret_key',
-      signOptions: { expiresIn: '1h' }
+      signOptions: { expiresIn: '1h' },
     }),
   ],
   providers: [AuthService, JwtStrategy, JwtGuard, JwtUserStrategy],
   controllers: [AuthController],
-  exports: [JwtGuard]
+  exports: [JwtGuard],
 })
 export class AuthModule {}

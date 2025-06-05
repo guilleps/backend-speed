@@ -4,7 +4,7 @@ import { User } from './user.entity';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './create-user.dto';
 import { UserMapper } from './user.mappers';
-import * as bcrypt from "bcrypt";
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
@@ -17,8 +17,8 @@ export class UsersService {
     return this.repo.save(user);
   }
 
-  async findByEmail(email: string) {
-    return this.repo.findOneBy({ email });
+  async findByEmail(email: string): Promise<User | null> {
+    return this.repo.findOne({ where: { email }, relations: ['company'] });
   }
 
   findAll() {
@@ -33,7 +33,7 @@ export class UsersService {
     return this.repo.update(id, data);
   }
 
-  delete(id: number) {
+  delete(id: string) {
     return this.repo.delete(id);
   }
 }

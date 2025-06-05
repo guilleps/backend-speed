@@ -3,12 +3,12 @@ import { Status } from './trip.entity';
 import { UUID } from 'crypto';
 
 export class CreateTripDto {
-
   @IsString()
   startDate: string;
 
   @IsString()
-  endDate: string;
+  @IsOptional()
+  endDate?: string;
 
   @IsUUID()
   origin: UUID;
@@ -17,6 +17,7 @@ export class CreateTripDto {
   destination: UUID;
 
   @IsEnum(Status)
+  @IsOptional()
   status: Status;
 
   @IsString()

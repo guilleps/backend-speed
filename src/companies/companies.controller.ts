@@ -30,6 +30,13 @@ export class CompaniesController {
     return this.service.findOne(id);
   }
 
+  @Get('/count-by-company/:companyId')
+  getDriverCountByCompany(@Param('companyId') companyId: string) {
+    console.log('ID de la empresa usada en la consulta:', companyId);
+    console.log('cantidad de conductores:', this.service.countDriversByCompany(companyId));
+    return this.service.countDriversByCompany(companyId);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: Company) {
     return this.service.update(+id, body);

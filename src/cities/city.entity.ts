@@ -9,5 +9,8 @@ export class City {
   name: string;
 
   @Column()
+  address: string;
+
+  @Column()
   companyId: string;
 }

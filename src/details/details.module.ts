@@ -8,5 +8,6 @@ import { Detail } from './detail.entity';
   imports: [TypeOrmModule.forFeature([Detail])],
   controllers: [DetailsController],
   providers: [DetailsService],
+  exports: [DetailsService],
 })
 export class DetailsModule {}

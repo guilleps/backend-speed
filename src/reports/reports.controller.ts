@@ -1,23 +1,15 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Patch,
-  Post,
-} from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ReportsService } from './reports.service';
-import { CreateReportDto } from './create-report.dto';
-import { Report } from './report.entity';
+import { Trip } from 'src/trips/trip.entity';
+import { Detail } from 'src/details/detail.entity';
 
 @Controller('reports')
 export class ReportsController {
   constructor(private readonly service: ReportsService) {}
 
   @Post()
-  create(@Body() dto: CreateReportDto) {
-    return this.service.create(dto);
+  create(@Body() trip: Trip, @Body() detail: Detail) {
+    return this.service.create(trip, detail);
   }
 
   @Get()
@@ -28,15 +20,5 @@ export class ReportsController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.service.findOne(id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() body: Report) {
-    return this.service.update(+id, body);
-  }
-
-  @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.service.delete(+id);
   }
 }

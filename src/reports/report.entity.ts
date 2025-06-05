@@ -31,4 +31,7 @@ export class Report {
 
   @Column()
   userId: string;
+
+  @Column({ type: 'float', nullable: true })
+  effectiveness?: number;
 }

@@ -8,7 +8,13 @@ export class DetailsService {
   constructor(@InjectRepository(Detail) private repo: Repository<Detail>) {}
 
   create(data: Partial<Detail>) {
-    const detail = this.repo.create(data);
+    const detail = this.repo.create({
+      ...data,
+      effectiveness:
+        (data.numberAlerts ?? 0) > 0
+          ? (data.numberResponses ?? 0) / (data.numberAlerts ?? 1)
+          : 1,
+    });
     return this.repo.save(detail);
   }
 
@@ -18,6 +24,10 @@ export class DetailsService {
 
   findOne(id: string) {
     return this.repo.findOneBy({ id });
+  }
+
+  findByTripId(tripId: string) {
+    return this.repo.findOne({ where: { tripId } });
   }
 
   update(id: number, data: Partial<Detail>) {

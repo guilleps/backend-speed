@@ -15,6 +15,7 @@ import { CreateCityDto } from './create-city.dto';
 import { City } from './city.entity';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 
 @Controller('cities')
 @UsePipes(ValidationPipe)
@@ -23,7 +24,10 @@ export class CitiesController {
 
   @Post()
   @UseGuards(JwtGuard)
-  create(@Body() dto: CreateCityDto, @CurrentCompany() company) {
+  create(
+    @Body() dto: CreateCityDto,
+    @CurrentCompany() company: AuthenticatedUser,
+  ) {
     console.log('company', company);
     dto.companyId = company.companyId;
     return this.service.create(dto);
@@ -31,7 +35,7 @@ export class CitiesController {
 
   @Get()
   @UseGuards(JwtGuard)
-  findAll(@CurrentCompany() company) {
+  findAll(@CurrentCompany() company: AuthenticatedUser) {
     return this.service.findByCompanyId(company.companyId);
   }
 

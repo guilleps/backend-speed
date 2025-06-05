@@ -1,15 +1,21 @@
-import { IsString } from 'class-validator';
+import { IsNumber, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class CreateDetailDto {
   @IsString()
   duration: string;
 
-  @IsString()
-  numberAlerts: string;
+  @IsNumber()
+  numberAlerts: number;
 
-  @IsString()
-  numberResponses: string;
+  @IsNumber()
+  numberResponses: number;
 
-  @IsString()
-  effectiveness: string;
+  @IsNumber()
+  effectiveness: number;
+
+  @IsUUID()
+  tripId: string;
+
+  @IsOptional()
+  dataCollected?: any;
 }

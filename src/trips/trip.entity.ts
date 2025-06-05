@@ -1,6 +1,12 @@
 import { City } from 'src/cities/city.entity';
 import { User } from 'src/users/user.entity';
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 export enum Status {
   IN_PROGRESS = 'IN_PROGRESS',
@@ -15,22 +21,16 @@ export class Trip {
   @Column()
   startDate: string;
 
-  @Column()
+  @Column({ nullable: true })
   endDate: string;
 
-  @ManyToOne(() => City)
+  @ManyToOne(() => City, { eager: true })
   @JoinColumn({ name: 'originId' })
   origin: City;
 
-  @ManyToOne(() => City)
+  @ManyToOne(() => City, { eager: true })
   @JoinColumn({ name: 'destinationId' })
   destination: City;
-
-  @Column()
-  originId: string;
-
-  @Column()
-  destinationId: string;
 
   @Column({ type: 'enum', enum: Status })
   status: Status;
