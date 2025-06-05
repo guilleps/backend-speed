@@ -22,7 +22,7 @@ export class TripsService {
     return this.repo.findOneBy({ id });
   }
 
-  update(id: number, data: Partial<Trip>) {
+  update(id: string, data: Partial<Trip>) {
     return this.repo.update(id, data);
   }
 

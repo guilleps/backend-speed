@@ -56,7 +56,7 @@ export class TripsController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: Trip) {
-    return this.service.update(+id, body);
+    return this.service.update(id, body);
   }
 
   @Delete(':id')
