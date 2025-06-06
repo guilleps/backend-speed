@@ -8,7 +8,7 @@ import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectRepository(User) private repo: Repository<User>) {}
+  constructor(@InjectRepository(User) private repo: Repository<User>) { }
 
   async create(dto: CreateUserDto) {
     const user = UserMapper.toEntity(dto);
@@ -19,6 +19,22 @@ export class UsersService {
 
   async findByEmail(email: string): Promise<User | null> {
     return this.repo.findOne({ where: { email }, relations: ['company'] });
+  }
+
+  countDriversByCompany(companyId: string): Promise<number> {
+    return this.repo.count({
+      where: {
+        company: { id: companyId },
+      },
+    });
+  }
+
+  findDriversByCompany(companyId: string) {
+    return this.repo.find({
+      where: { company: { id: companyId } },
+      select: ['id', 'name'],
+      order: { name: 'ASC' }
+    });
   }
 
   findAll() {

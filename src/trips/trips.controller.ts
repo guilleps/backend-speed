@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   UseGuards,
 } from '@nestjs/common';
 import { TripsService } from './trips.service';
@@ -57,6 +58,24 @@ export class TripsController {
   @UseGuards(JwtGuard, JwtUserGuard)
   countByUser(@CurrentUser() user: AuthenticatedUser) {
     return this.service.countByUserId(user.userId);
+  }
+
+  @Get('/destinations/by-company/:companyId')
+  getUniqueDestinations(@Param('companyId') companyId: string) {
+    return this.service.getUniqueDestinationsByCompany(companyId);
+  }
+
+  @Get('search')
+  @UseGuards(JwtGuard)
+  searchReports(
+    @CurrentUser() user: AuthenticatedUser,
+    @Query('dateFrom') dateFrom?: string,
+    @Query('dateTo') dateTo?: string,
+    @Query('driver') driver?: string,
+    @Query('destination') destination?: string,
+    @Query('status') status?: string
+  ) {
+    return this.service.searchTrips(user, { dateFrom, dateTo, driver, destination, status });
   }
 
   @Get()

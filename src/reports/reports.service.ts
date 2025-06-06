@@ -2,40 +2,31 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Report } from './report.entity';
 import { Repository } from 'typeorm';
-import { Trip } from 'src/trips/trip.entity';
-import { Detail } from 'src/details/detail.entity';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
+import { CreateReportDto } from './create-report.dto';
 
 @Injectable()
 export class ReportsService {
-  constructor(@InjectRepository(Report) private repo: Repository<Report>) {}
+  constructor(@InjectRepository(Report) private repo: Repository<Report>) { }
 
-  async create(trip: Trip, detail?: Detail) {
-    const duration =
-      new Date(trip.endDate).getTime() - new Date(trip.startDate).getTime();
-    const durationMinutes = Math.floor(duration / 60000);
-
+  async create(dto: CreateReportDto, user: AuthenticatedUser) {
     const report = this.repo.create({
-      dateGeneration: new Date().toISOString(),
-      travelStartDate: trip.startDate,
-      travelEndDate: trip.endDate,
-      source: trip.origin.name,
-      destination: trip.destination.name,
-      duration: `${durationMinutes} minutes`,
-      totalAlerts: 0,
-      alertsAttended: 0,
-      userId: trip.user.id,
+      ...dto,
+      createdBy: { id: user.userId },
+      company: { id: user.companyId },
     });
-
-    // if (detail) {
-    //   report.effectiveness =
-    //     detail.numberAlerts > 0
-    //       ? detail.numberResponses / detail.numberAlerts
-    //       : 1;
-    // }
-
-    return this.repo.save(report);
+    // console.log('Nuevo reporte guardado con filtros:', report);
+    return await this.repo.save(report);
   }
 
+  async findReportsByUserOrCompany(user: AuthenticatedUser) {
+    if (user.role === 'company') {
+      return this.repo.find({ where: { company: { id: user.companyId } }, order: { createdAt: 'DESC' } });
+    } else {
+      return this.repo.find({ where: { createdBy: { id: user.userId } }, order: { createdAt: 'DESC' } });
+    }
+  }
+  
   findAll() {
     return this.repo.find();
   }

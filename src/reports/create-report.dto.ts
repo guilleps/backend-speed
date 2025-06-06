@@ -1,30 +1,18 @@
-import { IsNumber, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 
 export class CreateReportDto {
   @IsString()
-  dateGeneration: string;
+  dateFrom?: string;
 
   @IsString()
-  travelStartDate: string;
+  dateTo?: string;
 
   @IsString()
-  travelEndDate: string;
+  driver?: string;
 
   @IsString()
-  source: string;
+  destination?: string;
 
   @IsString()
-  destination: string;
-
-  @IsString()
-  duration: string;
-
-  @IsNumber()
-  totalAlerts: number;
-
-  @IsNumber()
-  alertsAttended: number;
-
-  @IsString()
-  userId: string;
+  status?: string;
 }

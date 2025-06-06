@@ -1,15 +1,24 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ReportsService } from './reports.service';
-import { Trip } from 'src/trips/trip.entity';
-import { Detail } from 'src/details/detail.entity';
+import { JwtGuard } from 'src/auth/jwt/jwt.guard';
+import { CreateReportDto } from './create-report.dto';
+import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 
 @Controller('reports')
+@UseGuards(JwtGuard)
 export class ReportsController {
-  constructor(private readonly service: ReportsService) {}
+  constructor(private readonly service: ReportsService) { }
 
   @Post()
-  create(@Body() trip: Trip, @Body() detail: Detail) {
-    return this.service.create(trip, detail);
+  create(@Body() dto: CreateReportDto, @CurrentUser() user: AuthenticatedUser) {
+    return this.service.create(dto, user);
+  }
+
+  @Get()
+  @UseGuards(JwtGuard)
+  findByRole(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.findReportsByUserOrCompany(user);
   }
 
   @Get()

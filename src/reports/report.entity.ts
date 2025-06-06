@@ -1,37 +1,33 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Company } from 'src/companies/company.entity';
+import { User } from 'src/users/user.entity';
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('reports')
 export class Report {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
-  dateGeneration: string;
+  @Column({ type: 'date', nullable: true })
+  dateFrom?: string;
 
-  @Column()
-  travelStartDate: string;
+  @Column({ type: 'date', nullable: true })
+  dateTo?: string;
 
-  @Column()
-  travelEndDate: string;
+  @Column({ nullable: true })
+  driver?: string;  // nombre u ID
 
-  @Column()
-  source: string;
+  @Column({ nullable: true })
+  destination?: string;
 
-  @Column()
-  destination: string;
+  @Column({ nullable: true })
+  status?: string;
 
-  @Column()
-  duration: string;
+  @CreateDateColumn()
+  createdAt: Date;
 
-  @Column()
-  totalAlerts: number;
+  @ManyToOne(() => User, { nullable: true })
+  createdBy?: User;
 
-  @Column()
-  alertsAttended: number;
-
-  @Column()
-  userId: string;
-
-  @Column({ type: 'float', nullable: true })
-  effectiveness?: number;
+  @ManyToOne(() => Company, { nullable: true })
+  company?: Company;
 }

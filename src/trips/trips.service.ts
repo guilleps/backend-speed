@@ -5,6 +5,7 @@ import { Repository } from 'typeorm';
 import { CreateTripDto } from './create-trip.dto';
 import { TripMapper } from './trip.mappers';
 import { Between } from 'typeorm';
+import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 
 @Injectable()
 export class TripsService {
@@ -67,6 +68,56 @@ export class TripsService {
         user: { id: userId },
       },
     });
+  }
+
+  async getUniqueDestinationsByCompany(companyId: string) {
+    const raw = await this.repo.query(`
+        SELECT DISTINCT 
+          CONCAT(o.name, ' - ', d.name) AS "route"
+        FROM trips t
+        JOIN cities o ON o.id = t."originId"
+        JOIN cities d ON d.id = t."destinationId"
+        WHERE t."companyId" = $1
+      `, [companyId]);
+
+    return raw.map((r) => r.route);
+  }
+
+  async searchTrips(user: AuthenticatedUser, filters: any): Promise<Trip[]> {
+    const query = this.repo.createQueryBuilder('trip')
+      .leftJoinAndSelect('trip.origin', 'origin')
+      .leftJoinAndSelect('trip.destination', 'destination')
+      .leftJoinAndSelect('trip.user', 'user');
+  
+    if (user.role === 'company') {
+      query.andWhere('trip.companyId = :companyId', { companyId: user.companyId });
+    } else {
+      query.andWhere('trip.user = :userId', { userId: user.userId });
+    }
+  
+    if (filters.dateFrom) {
+      query.andWhere('trip.startDate >= :dateFrom', { dateFrom: filters.dateFrom });
+    }
+  
+    if (filters.dateTo) {
+      query.andWhere('trip.startDate <= :dateTo', { dateTo: filters.dateTo });
+    }
+  
+    if (filters.driver) {
+      query.andWhere('user.id = :driverId', { driverId: filters.driver });
+    }
+  
+    if (filters.destination) {
+      query.andWhere(`CONCAT(origin.name, ' - ', destination.name) ILIKE :destination`, {
+        destination: `%${filters.destination}%`
+      });
+    }
+  
+    if (filters.status) {
+      query.andWhere('trip.status = :status', { status: filters.status });
+    }
+  
+    return await query.orderBy('trip.startDate', 'DESC').getMany();
   }
 
   findAll() {

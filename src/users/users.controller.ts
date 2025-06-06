@@ -20,7 +20,7 @@ import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.inte
 @Controller('users')
 @UsePipes(ValidationPipe)
 export class UsersController {
-  constructor(private readonly service: UsersService) {}
+  constructor(private readonly service: UsersService) { }
 
   @Post()
   @UseGuards(JwtGuard)
@@ -30,6 +30,16 @@ export class UsersController {
   ) {
     dto.companyId = company.companyId;
     return this.service.create(dto);
+  }
+
+  @Get('/count-by-company/:companyId')
+  getDriverCountByCompany(@Param('companyId') companyId: string) {
+    return this.service.countDriversByCompany(companyId);
+  }
+
+  @Get('/by-company/:companyId')
+  getDriversByCompany(@Param('companyId') companyId: string) {
+    return this.service.findDriversByCompany(companyId);
   }
 
   @Get()
