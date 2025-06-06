@@ -16,11 +16,12 @@ import { City } from './city.entity';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
+import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
 
 @Controller('cities')
 @UsePipes(ValidationPipe)
 export class CitiesController {
-  constructor(private readonly service: CitiesService) {}
+  constructor(private readonly service: CitiesService) { }
 
   @Post()
   @UseGuards(JwtGuard)
@@ -28,15 +29,25 @@ export class CitiesController {
     @Body() dto: CreateCityDto,
     @CurrentCompany() company: AuthenticatedUser,
   ) {
-    console.log('company', company);
     dto.companyId = company.companyId;
     return this.service.create(dto);
+  }
+
+  @Get('available')
+  getAvailableCities(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.findByCompanyId(user.companyId);
   }
 
   @Get()
   @UseGuards(JwtGuard)
   findAll(@CurrentCompany() company: AuthenticatedUser) {
     return this.service.findByCompanyId(company.companyId);
+  }
+
+  @Get('count/by-company')
+  @UseGuards(JwtGuard)
+  getCityCount(@CurrentCompany() company: AuthenticatedUser) {
+    return this.service.countByCompanyId(company.companyId);
   }
 
   @Get(':id')

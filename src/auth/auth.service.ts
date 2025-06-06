@@ -11,16 +11,11 @@ export class AuthService {
     private readonly companiesService: CompaniesService,
     private readonly jwtService: JwtService,
     private readonly usersService: UsersService,
-  ) { }
+  ) {}
 
   async login({ email, password }: LoginDto) {
     const company = await this.companiesService.findByEmail(email);
-
-    console.log('company', company);
-    
     const user = await this.usersService.findByEmail(email);
-
-    console.log('user', user);
 
     const entity = user || company;
     if (!entity) throw new UnauthorizedException('Entity not founded');
@@ -31,22 +26,22 @@ export class AuthService {
     const role = user ? 'conductor' : 'company';
     const companyId = user?.company?.id ?? (company ? company.id : undefined);
 
-    if (!companyId) throw new UnauthorizedException('Conductor sin empresa asignada');
+    if (!companyId)
+      throw new UnauthorizedException('Conductor sin empresa asignada');
 
-    console.log('user info', user);
-    console.log('company info', company);
-    
+    // console.log('user info', user);
+    // console.log('company info', company);
 
     const payload = {
       sub: entity.id,
       email: entity.email,
       role,
-      companyId
+      companyId,
     };
 
     return {
       access_token: this.jwtService.sign(payload),
-      user: payload
+      user: payload,
     };
   }
 }

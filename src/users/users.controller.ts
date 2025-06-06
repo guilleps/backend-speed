@@ -28,7 +28,6 @@ export class UsersController {
     @Body() dto: CreateUserDto,
     @CurrentCompany() company: AuthenticatedUser,
   ) {
-    console.log('Current Company:', company);
     dto.companyId = company.companyId;
     return this.service.create(dto);
   }

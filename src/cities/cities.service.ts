@@ -22,6 +22,10 @@ export class CitiesService {
     return this.repo.find({ where: { companyId } });
   }
 
+  countByCompanyId(companyId: string) {
+    return this.repo.count({ where: { companyId } });
+  }
+
   findOne(id: string) {
     return this.repo.findOneBy({ id });
   }

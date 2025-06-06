@@ -1,6 +1,13 @@
 import { Company } from 'src/companies/company.entity';
 import { Trip } from 'src/trips/trip.entity';
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 export enum UserRole {
   conductor = 'conductor',
@@ -8,7 +15,7 @@ export enum UserRole {
 
 export enum Status {
   Activo = 'Activo',
-  Pendiente = 'Pendiente'
+  Pendiente = 'Pendiente',
 }
 
 @Entity('users')

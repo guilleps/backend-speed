@@ -1,10 +1,12 @@
 import { City } from 'src/cities/city.entity';
+import { Detail } from 'src/details/detail.entity';
 import { User } from 'src/users/user.entity';
 import {
   Column,
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -40,4 +42,10 @@ export class Trip {
 
   @Column()
   companyId: string;
+
+  @OneToMany(() => Detail, (detail) => detail.trip, {
+    cascade: true,
+    eager: true,
+  })
+  details: Detail[];
 }

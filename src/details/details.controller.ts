@@ -10,17 +10,20 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { DetailsService } from './details.service';
-import { CreateDetailDto } from './create-detail.dto';
 import { Detail } from './detail.entity';
+import { AlertRecordDto } from './dto/alert-record.dto';
 
 @Controller('details')
 @UsePipes(ValidationPipe)
 export class DetailsController {
   constructor(private readonly service: DetailsService) {}
 
-  @Post()
-  create(@Body() dto: CreateDetailDto) {
-    return this.service.create(dto);
+  @Post('/register/:tripId')
+  async create(
+    @Param('tripId') tripId: string,
+    @Body() alertas: AlertRecordDto[],
+  ) {
+    return this.service.create(tripId, alertas);
   }
 
   @Get()

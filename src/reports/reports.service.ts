@@ -21,17 +21,17 @@ export class ReportsService {
       source: trip.origin.name,
       destination: trip.destination.name,
       duration: `${durationMinutes} minutes`,
-      totalAlerts: detail?.numberAlerts ?? 0,
-      alertsAttended: detail?.numberResponses ?? 0,
+      totalAlerts: 0,
+      alertsAttended: 0,
       userId: trip.user.id,
     });
 
-    if (detail) {
-      report.effectiveness =
-        detail.numberAlerts > 0
-          ? detail.numberResponses / detail.numberAlerts
-          : 1;
-    }
+    // if (detail) {
+    //   report.effectiveness =
+    //     detail.numberAlerts > 0
+    //       ? detail.numberResponses / detail.numberAlerts
+    //       : 1;
+    // }
 
     return this.repo.save(report);
   }

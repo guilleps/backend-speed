@@ -1,5 +1,4 @@
 import {
-  BadRequestException,
   Body,
   Controller,
   Delete,
@@ -23,14 +22,11 @@ export class TripsController {
   constructor(
     private readonly service: TripsService,
     private readonly citiesService: CitiesService,
-  ) {}
+  ) { }
 
   @Post()
   @UseGuards(JwtGuard, JwtUserGuard)
-  create(
-    @Body() dto: CreateTripDto,
-    @CurrentUser() user: AuthenticatedUser,
-  ) {    
+  create(@Body() dto: CreateTripDto, @CurrentUser() user: AuthenticatedUser) {
     dto.userId = user.userId;
     dto.companyId = user.companyId;
 
@@ -39,9 +35,28 @@ export class TripsController {
     return this.service.create(dto);
   }
 
-  @Get('available-cities')
-  getAvailableCities(@CurrentUser() user: AuthenticatedUser) {
-    return this.citiesService.findByCompanyId(user.companyId);
+  @Get('by-user')
+  @UseGuards(JwtGuard, JwtUserGuard)
+  getByUser(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.findByUserId(user.userId);
+  }
+
+  @Get('by-company')
+  @UseGuards(JwtGuard, JwtUserGuard)
+  getByCompany(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.findByCompanyId(user.companyId);
+  }
+
+  @Get('count/company/last-week')
+  @UseGuards(JwtGuard, JwtUserGuard)
+  countTripsLastWeek(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.countCompanyTripsLastWeek(user.companyId);
+  }
+
+  @Get('count/by-user')
+  @UseGuards(JwtGuard, JwtUserGuard)
+  countByUser(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.countByUserId(user.userId);
   }
 
   @Get()

@@ -11,8 +11,8 @@ import { User } from 'src/users/user.entity';
 export class CompaniesService {
   constructor(
     @InjectRepository(Company) private repo: Repository<Company>,
-    @InjectRepository(User) private userRepo: Repository<User>
-  ) { }
+    @InjectRepository(User) private userRepo: Repository<User>,
+  ) {}
 
   async create(data: CreateCompanyDto) {
     const company = CompanyMapper.toEntity(data);
@@ -38,14 +38,14 @@ export class CompaniesService {
       name: companyFounded.name,
       ruc: companyFounded.ruc,
       address: companyFounded.address,
-      phone: companyFounded.phone
-    }
+      phone: companyFounded.phone,
+    };
   }
 
   countDriversByCompany(companyId: string): Promise<number> {
     return this.userRepo.count({
       where: {
-        company: { id: companyId }
+        company: { id: companyId },
       },
     });
   }

@@ -14,7 +14,7 @@ export class UserMapper {
       const company = new Company();
       company.id = dto.companyId;
       user.company = company;
-    };
+    }
 
     return user;
   }
