@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "trip-01",
+    "alertas": [
+      {
+        "segundo": 14,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "segundo": 25,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "segundo": 54,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "minuto": 8,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "minuto": 19,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 29,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "minuto": 32,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "minuto": 34,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 42,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "minuto": 43,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "hora": 0.96,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 1.09,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 1.34,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "hora": 4.08,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 5.28,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 7.01,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "hora": 7.34,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "hora": 8.82,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 8.85,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "hora": 8.89,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-02",
+    "alertas": [
+      {
+        "segundo": 43,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "segundo": 47,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "segundo": 57,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "minuto": 1,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 3,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "minuto": 8,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 0.15,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 20,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "minuto": 24,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "minuto": 26,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "hora": 0.69,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "hora": 2.98,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "hora": 3.61,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "hora": 5.32,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "hora": 5.52,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "hora": 6.51,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 7.87,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "hora": 8.33,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 8.61,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-03",
+    "alertas": [
+      {
+        "segundo": 26,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "segundo": 33,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "segundo": 57,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "minuto": 17,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "minuto": 20,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "minuto": 22,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "minuto": 30,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "minuto": 41,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "minuto": 51,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "minuto": 54,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 3.13,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 3.59,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "hora": 4.62,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 4.98,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 5.73,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 5.88,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "hora": 6.35,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "hora": 6.55,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "hora": 8.02,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 8.91,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-04",
+    "alertas": [
+      {
+        "segundo": 4,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "segundo": 10,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "segundo": 25,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 6,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 19,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "minuto": 27,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 34,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 36,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "hora": 0.71,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "hora": 0.85,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 3.74,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "hora": 3.85,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 4.05,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 5.89,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 6.16,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 6.7,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "hora": 7.18,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 7.4,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-05",
+    "alertas": [
+      {
+        "segundo": 7,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "segundo": 7,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "segundo": 8,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "minuto": 6,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "minuto": 6,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 0.36,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 32,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "hora": 0.61,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "minuto": 38,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 39,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "minuto": 51,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "hora": 0.86,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "hora": 0.97,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "hora": 0.98,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "hora": 2.61,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 3.96,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 6.1,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "hora": 7.37,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "hora": 7.38,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-06",
+    "alertas": [
+      {
+        "segundo": 33,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "segundo": 42,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "segundo": 57,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 19,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 25,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "minuto": 34,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 0.58,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "minuto": 35,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 36,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "minuto": 40,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 60,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 1.02,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 2.08,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 2.25,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 2.31,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 2.75,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 6.34,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "hora": 6.75,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "hora": 7.52,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 8.21,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-07",
+    "alertas": [
+      {
+        "segundo": 3,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "segundo": 24,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "segundo": 26,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "minuto": 1,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "minuto": 11,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "hora": 0.23,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 22,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "minuto": 30,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 34,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 46,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "minuto": 49,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "hora": 2.02,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "hora": 2.41,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "hora": 2.52,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "hora": 2.76,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 2.83,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "hora": 5.08,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "hora": 6.75,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 8.65,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "hora": 8.95,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-08",
+    "alertas": [
+      {
+        "segundo": 14,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "segundo": 16,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "segundo": 48,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 21,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "minuto": 24,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "minuto": 29,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "minuto": 45,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "minuto": 58,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "hora": 1.0,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 1.2,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 2.17,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 4.13,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "hora": 5.66,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 6.51,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 7.1,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "hora": 7.3,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 8.89,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 8.91,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-09",
+    "alertas": [
+      {
+        "segundo": 23,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "segundo": 49,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "segundo": 50,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "hora": 0.23,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "minuto": 18,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "minuto": 37,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "minuto": 39,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "minuto": 46,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "hora": 0.82,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "minuto": 56,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "minuto": 58,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 58,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 2.07,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 3.61,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "hora": 3.89,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 4.41,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 6.91,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 7.78,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 8.57,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "hora": 8.65,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-10",
+    "alertas": [
+      {
+        "segundo": 4,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "segundo": 26,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "segundo": 32,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 2,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "minuto": 3,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "hora": 0.16,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "minuto": 16,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 22,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 37,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 0.64,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "minuto": 56,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "minuto": 59,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 3.18,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 3.61,
+        "mensaje": "Control policial cercano",
+        "respondida": true
+      },
+      {
+        "hora": 5.47,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 5.94,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 6.73,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 7.72,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 8.59,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 8.96,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-11",
+    "alertas": [
+      {
+        "segundo": 1,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "segundo": 6,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "segundo": 23,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 16,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "minuto": 20,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 21,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 0.47,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "minuto": 31,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "minuto": 34,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "minuto": 53,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": false
+      },
+      {
+        "hora": 2.7,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "hora": 2.71,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 2.95,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 4.01,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 4.3,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 6.87,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "hora": 8.38,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "hora": 8.46,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 8.49,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-12",
+    "alertas": [
+      {
+        "segundo": 33,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "segundo": 45,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "segundo": 49,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 12,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "minuto": 17,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "minuto": 21,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "minuto": 23,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "minuto": 35,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "minuto": 47,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "hora": 0.8,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 0.87,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "hora": 0.95,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 3.54,
+        "mensaje": "Control policial cercano",
+        "respondida": true
+      },
+      {
+        "hora": 4.2,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 4.63,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "hora": 5.06,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 5.19,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "hora": 6.76,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "hora": 8.93,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-13",
+    "alertas": [
+      {
+        "segundo": 1,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "segundo": 42,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "segundo": 50,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "minuto": 1,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 12,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 17,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "minuto": 39,
+        "mensaje": "Puente angosto",
+        "respondida": true
+      },
+      {
+        "minuto": 44,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "minuto": 45,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "minuto": 60,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 1.59,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 2.16,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 2.2,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 3.44,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 5.08,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "hora": 5.5,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 5.54,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 5.66,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 6.82,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "hora": 8.06,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-14",
+    "alertas": [
+      {
+        "segundo": 20,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "segundo": 51,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "segundo": 60,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "minuto": 1,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "minuto": 8,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "minuto": 16,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 24,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "minuto": 26,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "minuto": 30,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "minuto": 42,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 1.21,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "hora": 4.0,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 4.92,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "hora": 5.07,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "hora": 5.49,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 6.39,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 6.49,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "hora": 6.63,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "hora": 6.74,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 8.93,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-15",
+    "alertas": [
+      {
+        "segundo": 24,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "segundo": 38,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "segundo": 56,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 0.23,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "minuto": 21,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 24,
+        "mensaje": "Cruce de peatones",
+        "respondida": false
+      },
+      {
+        "minuto": 28,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 0.47,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "minuto": 36,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "minuto": 47,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 49,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 1.26,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "hora": 1.77,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 4.85,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 5.36,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "hora": 5.4,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 5.48,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 6.14,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 7.36,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-16",
+    "alertas": [
+      {
+        "segundo": 14,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "segundo": 21,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "segundo": 32,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "minuto": 8,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "minuto": 20,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "minuto": 20,
+        "mensaje": "Control policial cercano",
+        "respondida": true
+      },
+      {
+        "minuto": 23,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 30,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "hora": 0.79,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "minuto": 56,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "minuto": 60,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "hora": 1.15,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "hora": 1.7,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "hora": 1.77,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 2.59,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "hora": 4.0,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "hora": 5.28,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "hora": 6.44,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 6.97,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 7.82,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-17",
+    "alertas": [
+      {
+        "segundo": 27,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "segundo": 33,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "segundo": 59,
+        "mensaje": "Control policial cercano",
+        "respondida": true
+      },
+      {
+        "minuto": 9,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "minuto": 16,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "minuto": 21,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "minuto": 35,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "minuto": 41,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 46,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "minuto": 58,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 1.2,
+        "mensaje": "Zona de derrumbe",
+        "respondida": false
+      },
+      {
+        "hora": 1.92,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 2.44,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 2.9,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "hora": 4.76,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "hora": 4.91,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 5.49,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "hora": 5.5,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "hora": 7.99,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 8.34,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-18",
+    "alertas": [
+      {
+        "segundo": 9,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "segundo": 31,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "segundo": 36,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "minuto": 12,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "minuto": 15,
+        "mensaje": "Zona de derrumbe",
+        "respondida": true
+      },
+      {
+        "minuto": 23,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "minuto": 27,
+        "mensaje": "Radar de velocidad",
+        "respondida": true
+      },
+      {
+        "minuto": 38,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "minuto": 40,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "minuto": 45,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 2.86,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "hora": 4.07,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 4.24,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 4.74,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "hora": 5.0,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 5.08,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "hora": 5.57,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": false
+      },
+      {
+        "hora": 6.12,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 6.78,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": true
+      },
+      {
+        "hora": 8.33,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      }
+    ]
+  },
+  {
+    "id": "trip-19",
+    "alertas": [
+      {
+        "segundo": 7,
+        "mensaje": "Baches en la carretera",
+        "respondida": true
+      },
+      {
+        "segundo": 10,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "segundo": 53,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": false
+      },
+      {
+        "minuto": 11,
+        "mensaje": "Cambio de carril obligatorio",
+        "respondida": true
+      },
+      {
+        "minuto": 18,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "minuto": 26,
+        "mensaje": "Tr\u00e1fico denso",
+        "respondida": true
+      },
+      {
+        "minuto": 34,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 0.64,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "minuto": 41,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "minuto": 46,
+        "mensaje": "Puente angosto",
+        "respondida": false
+      },
+      {
+        "minuto": 49,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": false
+      },
+      {
+        "hora": 1.9,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "hora": 2.11,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 3.1,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": true
+      },
+      {
+        "hora": 3.21,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": true
+      },
+      {
+        "hora": 4.01,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": false
+      },
+      {
+        "hora": 4.91,
+        "mensaje": "Salida pr\u00f3xima",
+        "respondida": true
+      },
+      {
+        "hora": 5.06,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "hora": 5.33,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 6.03,
+        "mensaje": "Zona escolar pr\u00f3xima",
+        "respondida": true
+      }
+    ]
+  },
+  {
+    "id": "trip-20",
+    "alertas": [
+      {
+        "segundo": 21,
+        "mensaje": "Baches en la carretera",
+        "respondida": false
+      },
+      {
+        "segundo": 58,
+        "mensaje": "Control policial cercano",
+        "respondida": true
+      },
+      {
+        "segundo": 59,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "minuto": 8,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "minuto": 13,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "minuto": 42,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "minuto": 54,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      },
+      {
+        "minuto": 55,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "minuto": 60,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "minuto": 60,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": false
+      },
+      {
+        "hora": 1.04,
+        "mensaje": "Animales en la v\u00eda",
+        "respondida": true
+      },
+      {
+        "hora": 2.05,
+        "mensaje": "Desv\u00edo adelante",
+        "respondida": false
+      },
+      {
+        "hora": 2.6,
+        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "respondida": false
+      },
+      {
+        "hora": 4.31,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": true
+      },
+      {
+        "hora": 7.39,
+        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "hora": 7.84,
+        "mensaje": "L\u00edmite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 8.3,
+        "mensaje": "\u00a1Reduce la velocidad!",
+        "respondida": true
+      },
+      {
+        "hora": 8.44,
+        "mensaje": "Tramo en reparaci\u00f3n",
+        "respondida": true
+      },
+      {
+        "hora": 8.68,
+        "mensaje": "Control policial cercano",
+        "respondida": false
+      },
+      {
+        "hora": 8.82,
+        "mensaje": "Radar de velocidad",
+        "respondida": false
+      }
+    ]
+  }
+]
