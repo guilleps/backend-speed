@@ -51,6 +51,8 @@ const ReportsPage = () => {
       try {
         // ⚠️ Usa nuevo endpoint de viajes según el rol
         const trips = await getDynamicTrips();
+        console.log(trips);
+
         setTrips(trips);
 
         if (user.role === 'company' && user.companyId) {
@@ -249,13 +251,15 @@ const ReportsPage = () => {
                       )}
                       <td className="p-4 text-gray-900">{trip.origin.name} - {trip.destination.name}</td>
                       <td className="p-4 text-gray-900">{calculateDuration(trip.startDate, trip.endDate)}</td>
-                      {/* <td className="p-4 text-gray-900">{trip.alerts}</td> */}
-                      {/* <td className="p-4">
-                        <span className="text-gray-900">{trip.responses}/{trip.alerts}</span>
+                      <td className="p-4 text-gray-900">
+                        {trip.details?.length ?? 0}
+                      </td>
+                      <td className="p-4 text-gray-900">
+                        {trip.details?.filter(d => d.responded).length ?? 0}/{trip.details?.length ?? 0}
                         <span className="text-sm text-gray-500 ml-1">
-                          ({getResponseRate(trip.alerts, trip.responses)}%)
+                          ({getResponseRate(trip.details?.length ?? 0, trip.details?.filter(d => d.responded).length ?? 0)}%)
                         </span>
-                      </td> */}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

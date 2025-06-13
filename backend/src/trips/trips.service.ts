@@ -124,7 +124,8 @@ export class TripsService {
     const query = this.repo.createQueryBuilder('trip')
       .leftJoinAndSelect('trip.origin', 'origin')
       .leftJoinAndSelect('trip.destination', 'destination')
-      .leftJoinAndSelect('trip.user', 'user');
+      .leftJoinAndSelect('trip.user', 'user')
+      .leftJoinAndSelect('trip.details', 'details');
 
     if (user.role === 'company') {
       query.andWhere('trip.companyId = :companyId', { companyId: user.companyId });
@@ -154,7 +155,18 @@ export class TripsService {
       query.andWhere('trip.status = :status', { status: filters.status });
     }
 
-    return await query.orderBy('trip.startDate', 'DESC').getMany();
+    const trips = await query.orderBy('trip.startDate', 'DESC').getMany();
+
+    return trips.map((trip) => {
+      const totalAlerts = trip.details?.length || 0;
+      const respondedAlerts = trip.details?.filter(d => d.responded === true).length || 0;
+
+      return {
+        ...trip,
+        totalAlerts,
+        respondedAlerts,
+      };
+    });
   }
 
   // Todos los viajes de todos los conductores de la empresa

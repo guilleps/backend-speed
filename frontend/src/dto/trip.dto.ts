@@ -8,7 +8,16 @@ export interface Trip {
     destination: Location;
     companyId: string;
     user?: User;
+    details?: Detail[];
     status?: "IN_PROGRESS" | "FINISHED";
+}
+
+export interface Detail {
+    id: string;
+    message: string;
+    responded: boolean;
+    triggerSecond: number;
+    tripId: string;
 }
 
 interface BaseTripDto {
