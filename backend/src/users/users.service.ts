@@ -37,6 +37,15 @@ export class UsersService {
     });
   }
 
+  async getName(userId: string): Promise<string | null> {
+    const user = await this.repo.findOne({
+      where: { id: userId },
+      select: ['name'],
+    });
+  
+    return user?.name ?? null;
+  }
+
   findAll() {
     return this.repo.find();
   }

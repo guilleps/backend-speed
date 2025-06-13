@@ -7,12 +7,14 @@ import { useAuth } from "@/contexts/AuthContext";
 import { getCountByUser, getTripsByUser } from "@/services/trip.service";
 import { useToast } from "@/hooks/use-toast";
 import { Trip } from "@/dto/trip.dto";
+import { getName } from "@/services/user.service";
 
 const DriverDashboard = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
   const { toast } = useToast();
   const [totalTrips, setTotalTrips] = useState<number>(0);
+  const [name, setName] = useState<string>("");
   const [myTrips, setMyTrips] = useState<Trip[]>([]);
 
   const fetchRecentlyTrips = async () => {
@@ -43,13 +45,34 @@ const DriverDashboard = () => {
     }
   };
 
+  const fetchName = async () => {
+    try {
+      const name = await getName();
+      setName(name);
+    } catch (error) {
+      console.error("Error al obtener nombre del usuario:", error);
+      toast({
+        title: "Error al obtener nombre",
+        description: error.response?.data?.message || "Error inesperado",
+        variant: "destructive",
+      });
+    }
+  }
+
   useEffect(() => {
+    console.log('user', user);
+    fetchName();
     fetchNumberTrips();
     fetchRecentlyTrips();
   }, []);
 
+  useEffect(() => {
+    if (!user || user.role !== 'conductor') {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
   if (!user || user.role !== 'conductor') {
-    navigate('/login');
     return null;
   }
 
@@ -67,7 +90,7 @@ const DriverDashboard = () => {
               />
               <div>
                 <h1 className="text-xl font-semibold text-ispeed-black">Panel del Conductor</h1>
-                <p className="text-sm text-gray-600">Bienvenido, {user.name}</p>
+                <p className="text-sm text-gray-600">Bienvenido, {name}</p>
               </div>
             </div>
 

@@ -13,7 +13,6 @@ import { getDestinationsByCompany, getDestinationsByUser, getDynamicTrips } from
 import { searchReports } from "@/services/trip.service";
 import { ReportFilters } from "@/dto/report.dto";
 import { Trip } from "@/dto/trip.dto";
-import { createReport } from "@/services/report.service";
 
 const ReportsPage = () => {
   const navigate = useNavigate();
@@ -43,19 +42,7 @@ const ReportsPage = () => {
   const handleSearch = async () => {
     const normalized = normalizeFilters(filters);
     const results = await searchReports(normalized);
-
     setTrips(results);
-
-    const hasActiveFilters =
-      normalized.dateFrom || normalized.dateTo || normalized.driver || normalized.destination || normalized.status;
-
-    if (results.length > 0 && hasActiveFilters) {
-      try {
-        await createReport(normalized);
-      } catch (error) {
-        console.error("No se pudo guardar el reporte:", error);
-      }
-    }
   };
 
   useEffect(() => {

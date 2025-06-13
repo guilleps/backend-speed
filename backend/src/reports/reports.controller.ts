@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ReportsService } from './reports.service';
-import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CreateReportDto } from './create-report.dto';
 import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
+import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 
 @Controller('reports')
 @UseGuards(JwtGuard)

@@ -1,4 +1,4 @@
-import apiClient from "@/api/axios"
+import apiClient from "@/api/axios";
 import { City, CreateCityDto } from "@/dto/city.dto";
 
 export const createCity = async (data: CreateCityDto): Promise<City> => {

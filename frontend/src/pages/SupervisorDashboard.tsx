@@ -5,67 +5,65 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { BarChart3, Users, MapPin, AlertTriangle, Settings } from "lucide-react";
-import { getTripCountByCompanyLastWeek, getTripsByCompany } from "@/services/trip.service";
+import { getTripCountByCompanyCurrentWeek, getTripCountByCompanyLastWeek, getTripsByCompany } from "@/services/trip.service";
 import { Trip } from "@/dto/trip.dto";
 import { getCityCountByCompany } from "@/services/cities.service";
 import { getDriverCountByCompany } from "@/services/user.service";
+import { getName } from "@/services/company.service";
 
 const SupervisorDashboard = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
   const [isConfigured, setIsConfigured] = useState(true); // Simular empresa ya configurada
+  const [name, setName] = useState<string>("")
   const [driverCount, setDriverCount] = useState<number>(0);
   const [cityCount, setCityCount] = useState<number>(0);
-  const [tripsInLastWeek, setTripsInLastWeek] = useState<number>(0);
   const [myTrips, setMyTrips] = useState<Trip[]>([]);
+  const [countThisWeek, setCountThisWeek] = useState<number>(0);
+  const [countLastWeek, setCountLastWeek] = useState<number>(0);
+  const [percentChange, setPercentChange] = useState<string>("");
+  const [isChangePositive, setIsChangePositive] = useState<boolean | null>(null);
+
+  const loadDashboardData = async () => {
+    if (!user?.companyId) return;
+
+    try {
+      const [name, drivers, cities, trips, thisWeek, lastWeek] = await Promise.all([
+        getName(),
+        getDriverCountByCompany(user.companyId),
+        getCityCountByCompany(),
+        getTripsByCompany(),
+        getTripCountByCompanyCurrentWeek(),
+        getTripCountByCompanyLastWeek()
+      ]);
+      
+      setName(name);
+      setDriverCount(drivers);
+      setCityCount(cities);
+      setMyTrips(trips);
+      setCountThisWeek(thisWeek);
+      setCountLastWeek(lastWeek);
+
+      // % cálculo
+      if (lastWeek === 0 && thisWeek > 0) {
+        setPercentChange("+100%");
+        setIsChangePositive(true);
+      } else if (lastWeek === 0 && thisWeek === 0) {
+        setPercentChange("0%");
+        setIsChangePositive(null);
+      } else {
+        const diff = ((thisWeek - lastWeek) / lastWeek) * 100;
+        setPercentChange(`${diff > 0 ? '+' : ''}${diff.toFixed(0)}%`);
+        setIsChangePositive(diff > 0);
+      }
+    } catch (error) {
+      console.error("Error al cargar datos del dashboard:", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchDriverCount = async () => {
-      if (!user?.companyId) return;
-      try {
-        const count = await getDriverCountByCompany(user.companyId);
-        setDriverCount(count);
-      } catch (error) {
-        console.error("Error al contar conductores", error);
-      }
-    };
-
-    const fetchCityCount = async () => {
-      try {
-        const count = await getCityCountByCompany();
-        setCityCount(count);
-      } catch (error) {
-        console.error("Error al obtener número de ciudades:", error);
-      }
-    };
-    
-    const fetchTripsInLastWeek = async () => {
-      try {
-        const count = await getTripCountByCompanyLastWeek();
-        setTripsInLastWeek(count);
-      } catch (error) {
-        console.error("Error al obtener número de viajes de la semana:", error);
-      }
-    };
-
-    fetchDriverCount();
-    fetchTripsInLastWeek();
-    fetchCityCount();
+    loadDashboardData();
   }, [user]);
-
-  useEffect(() => {
-    const fetchCompanyTrips = async () => {
-      try {
-        const trips = await getTripsByCompany();
-        // console.log("Viajes de la empresa:", trips);
-        setMyTrips(trips);
-      } catch (error) {
-        console.error("Error al obtener los viajes de la empresa:", error);
-      }
-    };
-
-    fetchCompanyTrips();
-  }, []);
 
   // Datos simulados
   const dashboardData = {
@@ -124,7 +122,7 @@ const SupervisorDashboard = () => {
               />
               <div>
                 <h1 className="text-xl font-semibold text-ispeed-black">Panel de Supervisor</h1>
-                <p className="text-sm text-gray-600">Bienvenido, {user.name}</p>
+                <p className="text-sm text-gray-600">Bienvenido, {name}</p>
               </div>
             </div>
 
@@ -176,8 +174,17 @@ const SupervisorDashboard = () => {
               <BarChart3 className="h-4 w-4 text-blue-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-ispeed-black">{tripsInLastWeek}</div>
-              <p className="text-xs text-green-600">+12% vs semana anterior</p>
+              <div className="text-2xl font-bold text-ispeed-black">{countThisWeek}</div>
+              <p
+                className={`text-xs ${isChangePositive === null
+                  ? 'text-gray-500'
+                  : isChangePositive
+                    ? 'text-green-600'
+                    : 'text-red-600'
+                  }`}
+              >
+                {percentChange} vs semana anterior
+              </p>
             </CardContent>
           </Card>
 

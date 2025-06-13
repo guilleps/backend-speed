@@ -12,11 +12,11 @@ import {
 import { TripsService } from './trips.service';
 import { CreateTripDto } from './create-trip.dto';
 import { Trip } from './trip.entity';
-import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CitiesService } from 'src/cities/cities.service';
 import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
-import { JwtUserGuard } from 'src/auth/jwt/jwt-user.guard';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
+import { JwtGuard } from 'src/auth/jwt/jwt.guard';
+import { JwtUserGuard } from 'src/auth/jwt/jwt-user.guard';
 
 @Controller('trips')
 export class TripsController {
@@ -52,6 +52,12 @@ export class TripsController {
   @UseGuards(JwtGuard, JwtUserGuard)
   countTripsLastWeek(@CurrentUser() user: AuthenticatedUser) {
     return this.service.countCompanyTripsLastWeek(user.companyId);
+  }
+
+  @Get('count/company/current-week')
+  @UseGuards(JwtGuard, JwtUserGuard)
+  countTripsCurrentWeek(@CurrentUser() user: AuthenticatedUser) {
+    return this.service.countCompanyTripsCurrentWeek(user.companyId);
   }
 
   @Get('count/by-user')
@@ -94,23 +100,8 @@ export class TripsController {
     }
   }
 
-  @Get()
-  findAll() {
-    return this.service.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.service.findOne(id);
-  }
-
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: Trip) {
     return this.service.update(id, body);
-  }
-
-  @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.service.delete(+id);
   }
 }

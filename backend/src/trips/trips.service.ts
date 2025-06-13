@@ -62,6 +62,30 @@ export class TripsService {
     });
   };
 
+  async countCompanyTripsCurrentWeek(companyId: string): Promise<number> {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = domingo, 1 = lunes, ..., 6 = sábado
+
+    const monday = new Date(today);
+    const daysSinceMonday = (dayOfWeek + 6) % 7;
+    monday.setDate(today.getDate() - daysSinceMonday);
+    monday.setHours(0, 0, 0, 0);
+
+    const sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    sunday.setHours(23, 59, 59, 999);
+
+    return this.repo.count({
+      where: {
+        companyId,
+        startDate: Between(
+          monday.toISOString(),
+          sunday.toISOString()
+        ),
+      },
+    });
+  }
+
   async countByUserId(userId: string): Promise<number> {
     return this.repo.count({
       where: {

@@ -13,10 +13,10 @@ import {
 import { CitiesService } from './cities.service';
 import { CreateCityDto } from './create-city.dto';
 import { City } from './city.entity';
-import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { CurrentCompany } from 'src/shared/decorators/current-company/current-company.decorator';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 import { CurrentUser } from 'src/shared/decorators/current-user/current-user.decorator';
+import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 
 @Controller('cities')
 @UsePipes(ValidationPipe)

@@ -17,6 +17,15 @@ export class CompaniesService {
     return this.repo.save(company);
   }
 
+  async getName(companyId: string): Promise<string | null> {
+    const user = await this.repo.findOne({
+      where: { id: companyId },
+      select: ['name'],
+    });
+  
+    return user?.name ?? null;
+  }
+
   findAll() {
     return this.repo.find();
   }

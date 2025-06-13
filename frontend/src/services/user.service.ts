@@ -26,10 +26,12 @@ export const getDriversByCompany = async (companyId: string): Promise<User[]> =>
     return response.data;
 };
 
-export const updateUser = async (id: string, data: Partial<User>): Promise<User> => {
-    const response = await apiClient.patch<User>(`/users/${id}`, data);
+export const getName = async (): Promise<string> => {
+    const response = await apiClient.get<string>(`/users/name`, {
+        withCredentials: true,
+    });
     return response.data;
-};
+}
 
 export const deleteUser = async (id: string): Promise<void> => {
     await apiClient.delete(`/users/${id}`);

@@ -1,8 +1,15 @@
-import apiClient from "@/api/axios"
+import apiClient from "@/api/axios";
 import { Company, CreateCompanyDto } from "@/dto/company.dto";
 
 export const createCompany = async (data: CreateCompanyDto): Promise<Company> => {
     const response = await apiClient.post<Company>('/companies', data);
+    return response.data;
+}
+
+export const getName = async (): Promise<string> => {
+    const response = await apiClient.get<string>(`/companies/name`, {
+        withCredentials: true,
+    });
     return response.data;
 }
 

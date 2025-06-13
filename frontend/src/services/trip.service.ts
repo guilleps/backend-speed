@@ -26,8 +26,17 @@ export const getTripsByCompany = async (): Promise<Trip[]> => {
     return response.data;
 };
 
+export const getTripCountByCompanyCurrentWeek = async (): Promise<number> => {
+    const response = await apiClient.get<number>('/trips/count/company/current-week', {
+        withCredentials: true,
+    });
+    return response.data;
+};
+
 export const getTripCountByCompanyLastWeek = async (): Promise<number> => {
-    const response = await apiClient.get<number>('/trips/count/company/last-week');
+    const response = await apiClient.get<number>('/trips/count/company/last-week', {
+        withCredentials: true,
+    });
     return response.data;
 };
 

@@ -14,10 +14,6 @@ export class CitiesService {
     return { id: city.id, name: city.name, address: city.address };
   }
 
-  findAll() {
-    return this.repo.find();
-  }
-
   findByCompanyId(companyId: string) {
     return this.repo.find({ where: { companyId } });
   }
