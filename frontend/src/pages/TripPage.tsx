@@ -149,11 +149,22 @@ const TripPage = () => {
     }
   };
 
+  const filterOccurredAlerts = (alerts: AlertRecord[], currentDuration: number) => {
+    return alerts
+      .map(alert => ({
+        ...alert,
+        triggerSecond: alert.segundo ?? alert.minuto * 60 ?? alert.hora * 3600 ?? 0
+      }))
+      .filter(alert => alert.triggerSecond <= currentDuration);
+  }
+
   const endTrip = async () => {
     if (!tripId) return;
 
+    const ocurredAlerts = filterOccurredAlerts(selectedTrip.alertas, tripData.duration);
+
     try {
-      await createDetail(tripId, selectedTrip.alertas);
+      await createDetail(tripId, ocurredAlerts);
 
       await updateTrip(tripId, {
         endDate: new Date().toISOString(),
