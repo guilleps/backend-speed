@@ -16,20 +16,21 @@ const DriverDashboard = () => {
   const [totalTrips, setTotalTrips] = useState<number>(0);
   const [name, setName] = useState<string>("");
   const [myTrips, setMyTrips] = useState<Trip[]>([]);
+  const [alertResponseRate, setAlertResponseRate] = useState<number>(0);
 
-  const fetchRecentlyTrips = async () => {
+  const fetchName = async () => {
     try {
-      const trips = await getTripsByUser();
-      setMyTrips(trips);
+      const name = await getName();
+      setName(name);
     } catch (error) {
-      console.error("Error al obtener viajes del usuario:", error);
+      console.error("Error al obtener nombre del usuario:", error);
       toast({
-        title: "Error al obtener viajes",
+        title: "Error al obtener nombre",
         description: error.response?.data?.message || "Error inesperado",
         variant: "destructive",
       });
     }
-  };
+  }
 
   const fetchNumberTrips = async () => {
     try {
@@ -45,19 +46,35 @@ const DriverDashboard = () => {
     }
   };
 
-  const fetchName = async () => {
+  const calculateAlertRate = (trips: Trip[]) => {
+    let totalDetails = 0;
+    let respondedCount = 0;
+
+    trips.forEach((trip) => {
+      if (trip.details && trip.details.length > 0) {
+        totalDetails += trip.details.length;
+        respondedCount += trip.details.filter(d => d.responded).length;
+      }
+    });
+
+    const rate = totalDetails > 0 ? (respondedCount / totalDetails) * 100 : 0;
+    setAlertResponseRate(rate);
+  }
+
+  const fetchRecentlyTrips = async () => {
     try {
-      const name = await getName();
-      setName(name);
+      const trips = await getTripsByUser();
+      setMyTrips(trips);
+      calculateAlertRate(trips);
     } catch (error) {
-      console.error("Error al obtener nombre del usuario:", error);
+      console.error("Error al obtener viajes del usuario:", error);
       toast({
-        title: "Error al obtener nombre",
+        title: "Error al obtener viajes",
         description: error.response?.data?.message || "Error inesperado",
         variant: "destructive",
       });
     }
-  }
+  };
 
   useEffect(() => {
     console.log('user', user);
@@ -137,7 +154,7 @@ const DriverDashboard = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-ispeed-black">Viajes Totales</CardTitle>
@@ -148,7 +165,7 @@ const DriverDashboard = () => {
             </CardContent>
           </Card>
 
-          <Card>
+          {/* <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-ispeed-black">Puntuación Promedio</CardTitle>
             </CardHeader>
@@ -156,14 +173,14 @@ const DriverDashboard = () => {
               <div className="text-3xl font-bold text-green-600">85</div>
               <p className="text-sm text-gray-600">Sobre 100 puntos</p>
             </CardContent>
-          </Card>
+          </Card> */}
 
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-ispeed-black">Alertas Atendidas</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-blue-600">94%</div>
+              <div className="text-3xl font-bold text-blue-600">{alertResponseRate.toFixed(0)}%</div>
               <p className="text-sm text-gray-600">Índice de respuesta</p>
             </CardContent>
           </Card>

@@ -9,9 +9,10 @@ import { Mic, Square } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import tripSimulations from "./simulated_trips.json";
 import { City } from "@/dto/city.dto";
-import { getCitiesByCompany } from "@/services/cities.service";
+import { getCities } from "@/services/cities.service";
 import { createTrip, updateTrip } from "@/services/trip.service";
 import { createDetail } from "@/services/details.service";
+import { ConfirmEndTripModal } from "./ConfirmEndTripModal";
 
 type AlertRecord = {
   segundo: number;
@@ -39,11 +40,12 @@ const TripPage = () => {
   const [tripData, setTripData] = useState({ alerts: 0, responses: 0, duration: 0 });
   const [availableCities, setAvailableCities] = useState<City[]>([]);
   const [tripId, setTripId] = useState<string | null>(null);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
 
   useEffect(() => {
     const fetchCities = async () => {
       try {
-        const cities = await getCitiesByCompany();
+        const cities = await getCities();
         setAvailableCities(cities);
       } catch (error) {
         console.error("Error al obtener ciudades disponibles:", error);
@@ -52,6 +54,13 @@ const TripPage = () => {
 
     fetchCities();
   }, []);
+
+  const handleEndTrip = async () => {
+    // Aquí puedes llamar al servicio de finalizar viaje
+    toast({ title: "Viaje finalizado correctamente" });
+    setShowConfirmModal(false);
+    await endTrip();
+  };
 
   const findCityNameById = (id: string) => {
     return availableCities.find(available => available.id === id).name;
@@ -268,9 +277,15 @@ const TripPage = () => {
               <div className="text-sm text-gray-300">Efectividad</div>
             </div>
           </div>
-          <Button onClick={endTrip} size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4">
+          <Button onClick={() => setShowConfirmModal(true)} size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4">
             <Square className="w-5 h-5 mr-2" /> Finalizar Viaje
           </Button>
+
+          <ConfirmEndTripModal
+            open={showConfirmModal}
+            onConfirm={handleEndTrip}
+            onCancel={() => setShowConfirmModal(false)}
+          />
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gray-700 overflow-hidden">

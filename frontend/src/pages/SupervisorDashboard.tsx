@@ -23,6 +23,8 @@ const SupervisorDashboard = () => {
   const [countLastWeek, setCountLastWeek] = useState<number>(0);
   const [percentChange, setPercentChange] = useState<string>("");
   const [isChangePositive, setIsChangePositive] = useState<boolean | null>(null);
+  const [alertCountThisWeek, setAlertCountThisWeek] = useState<number>(0);
+const [alertResponseRate, setAlertResponseRate] = useState<number>(0);
 
   const loadDashboardData = async () => {
     if (!user?.companyId) return;
@@ -41,6 +43,7 @@ const SupervisorDashboard = () => {
       setDriverCount(drivers);
       setCityCount(cities);
       setMyTrips(trips);
+      calculateWeeklyAlertStats(trips);
       setCountThisWeek(thisWeek);
       setCountLastWeek(lastWeek);
 
@@ -59,6 +62,39 @@ const SupervisorDashboard = () => {
     } catch (error) {
       console.error("Error al cargar datos del dashboard:", error);
     }
+  };
+
+  const isThisWeek = (dateStr: string) => {
+    const now = new Date();
+    const start = new Date(dateStr);
+    const dayOfWeek = now.getDay();
+    const monday = new Date(now);
+    monday.setDate(now.getDate() - ((dayOfWeek + 6) % 7));
+    monday.setHours(0, 0, 0, 0);
+  
+    const sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    sunday.setHours(23, 59, 59, 999);
+  
+    return start >= monday && start <= sunday;
+  };
+  
+  const calculateWeeklyAlertStats = (trips: Trip[]) => {
+    let totalAlerts = 0;
+    let respondedAlerts = 0;
+  
+    trips.forEach((trip) => {
+      if (isThisWeek(trip.startDate)) {
+        const tripAlerts = trip.details?.length || 0;
+        const responded = trip.details?.filter(d => d.responded)?.length || 0;
+  
+        totalAlerts += tripAlerts;
+        respondedAlerts += responded;
+      }
+    });
+  
+    setAlertCountThisWeek(totalAlerts);
+    setAlertResponseRate(totalAlerts > 0 ? (respondedAlerts / totalAlerts) * 100 : 0);
   };
 
   useEffect(() => {
@@ -205,8 +241,8 @@ const SupervisorDashboard = () => {
               <AlertTriangle className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-ispeed-black">{dashboardData.alertsThisWeek}</div>
-              <p className="text-xs text-gray-600">{dashboardData.responseRate}% atendidas</p>
+              <div className="text-2xl font-bold text-ispeed-black">{alertCountThisWeek}</div>
+              <p className="text-xs text-gray-600">{alertResponseRate.toFixed(0)}% atendidas</p>
             </CardContent>
           </Card>
         </div>

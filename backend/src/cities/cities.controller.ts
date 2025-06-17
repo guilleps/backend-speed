@@ -33,11 +33,6 @@ export class CitiesController {
     return this.service.create(dto);
   }
 
-  @Get('available')
-  getAvailableCities(@CurrentUser() user: AuthenticatedUser) {
-    return this.service.findByCompanyId(user.companyId);
-  }
-
   @Get()
   @UseGuards(JwtGuard)
   findAll(@CurrentCompany() company: AuthenticatedUser) {

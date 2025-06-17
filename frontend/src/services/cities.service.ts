@@ -6,13 +6,10 @@ export const createCity = async (data: CreateCityDto): Promise<City> => {
     return response.data;
 };
 
-export const getCitiesByCompany = async (): Promise<City[]> => {
-    const response = await apiClient.get<City[]>("/cities/available");
-    return response.data;
-};
-
 export const getCities = async (): Promise<City[]> => {
-    const response = await apiClient.get<City[]>('/cities');
+    const response = await apiClient.get<City[]>('/cities', {
+        withCredentials: true,
+    });
     return response.data;
 };
 
