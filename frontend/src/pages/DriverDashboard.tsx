@@ -77,7 +77,7 @@ const DriverDashboard = () => {
   };
 
   useEffect(() => {
-    console.log('user', user);
+    // console.log('user', user);
     fetchName();
     fetchNumberTrips();
     fetchRecentlyTrips();

@@ -30,7 +30,7 @@ export class CompaniesController {
   @Get('name')
   @UseGuards(JwtGuard)
   getName(@CurrentCompany() user: AuthenticatedUser) {
-    console.log('user', user);
+    // console.log('user', user);
     
     return this.service.getName(user.companyId);
   }

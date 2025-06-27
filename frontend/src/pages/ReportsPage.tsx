@@ -49,9 +49,8 @@ const ReportsPage = () => {
 
     const fetchData = async () => {
       try {
-        // ⚠️ Usa nuevo endpoint de viajes según el rol
         const trips = await getDynamicTrips();
-        console.log(trips);
+        // console.log(trips);
 
         setTrips(trips);
 
