@@ -8,10 +8,14 @@ import { Between } from 'typeorm';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 import axios from 'axios';
 import { UpdateTripDto } from './update-trip.dto';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class TripsService {
-  constructor(@InjectRepository(Trip) private repo: Repository<Trip>) { }
+  constructor(
+    private configService: ConfigService,
+    @InjectRepository(Trip) private repo: Repository<Trip>
+  ) { }
 
   async create(data: CreateTripDto) {
     const trip = TripMapper.toEntity(data);
@@ -28,8 +32,10 @@ export class TripsService {
   }
 
   async predictConduct(input: any): Promise<string> {
+    const modelURL = this.configService.get<string>('ML_URL', 'http://localhost:5000')
+
     try {
-      const response = await axios.post('http://localhost:5000/predict', input);
+      const response = await axios.post(`${modelURL}/predict`, input);
       return response.data.conduct; // "NORMAL" o "AGRESIVO"
     } catch (error) {
       console.error('Error al predecir la conducta:', error.message);
