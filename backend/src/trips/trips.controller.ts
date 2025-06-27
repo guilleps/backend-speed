@@ -17,6 +17,7 @@ import { CurrentUser } from 'src/shared/decorators/current-user/current-user.dec
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
 import { JwtGuard } from 'src/auth/jwt/jwt.guard';
 import { JwtUserGuard } from 'src/auth/jwt/jwt-user.guard';
+import { UpdateTripDto } from './update-trip.dto';
 
 @Controller('trips')
 export class TripsController {
@@ -101,7 +102,7 @@ export class TripsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body: Trip) {
-    return this.service.update(id, body);
+  update(@Param('id') id: string, @Body() updateTripDto: UpdateTripDto) {
+    return this.service.update(id, updateTripDto);
   }
 }

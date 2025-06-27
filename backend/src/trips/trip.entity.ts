@@ -37,6 +37,12 @@ export class Trip {
   @Column({ type: 'enum', enum: Status })
   status: Status;
 
+  @Column({ nullable: true })
+  conduct: string;
+
+  @Column({ type: 'json', nullable: true })
+  inputConduct?: Record<string, number>;
+
   @ManyToOne(() => User, (user) => user.trips)
   user: User;
 

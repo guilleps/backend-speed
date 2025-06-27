@@ -6,6 +6,8 @@ import { CreateTripDto } from './create-trip.dto';
 import { TripMapper } from './trip.mappers';
 import { Between } from 'typeorm';
 import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.interface';
+import axios from 'axios';
+import { UpdateTripDto } from './update-trip.dto';
 
 @Injectable()
 export class TripsService {
@@ -13,7 +15,26 @@ export class TripsService {
 
   async create(data: CreateTripDto) {
     const trip = TripMapper.toEntity(data);
+
+    // Llamada al modelo de IA para predecir la conducta
+    try {
+      const conduct = await this.predictConduct(data); 
+      trip.conduct = conduct; 
+    } catch (err) {
+      trip.conduct = 'DESCONOCIDA';
+    }
+
     return await this.repo.save(trip);
+  }
+
+  async predictConduct(input: any): Promise<string> {
+    try {
+      const response = await axios.post('http://localhost:5000/predict', input);
+      return response.data.conduct; // "NORMAL" o "AGRESIVO"
+    } catch (error) {
+      console.error('Error al predecir la conducta:', error.message);
+      return 'DESCONOCIDA';
+    }
   }
 
   findByUserId(userId: string) {
@@ -195,8 +216,20 @@ export class TripsService {
     return this.repo.findOneBy({ id });
   }
 
-  update(id: string, data: Partial<Trip>) {
-    return this.repo.update(id, data);
+  async update(id: string, updateTripDto: UpdateTripDto) {
+    const trip = await this.repo.findOneBy({ id });
+    if (!trip) throw new Error('Trip not found');
+
+    // Si recibimos inputConduct, usamos el modelo
+    if (updateTripDto.inputConduct) {
+      const predicted = await this.predictConduct(updateTripDto.inputConduct);
+      trip.conduct = predicted;
+    }
+
+    // Asignamos el resto de campos (como endDate, status)
+    Object.assign(trip, updateTripDto);
+
+    return this.repo.save(trip);
   }
 
   delete(id: number) {

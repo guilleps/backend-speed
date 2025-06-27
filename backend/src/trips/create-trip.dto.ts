@@ -20,6 +20,10 @@ export class CreateTripDto {
   @IsOptional()
   status: Status;
 
+  @IsOptional()
+  @IsString()
+  conduct?: string;
+
   @IsString()
   userId?: string;
 

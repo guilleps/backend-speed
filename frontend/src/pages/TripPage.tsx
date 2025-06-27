@@ -25,6 +25,23 @@ type AlertRecord = {
 type TripSimulation = {
   id: string;
   alertas: AlertRecord[];
+  inputConduct: {
+    acceleration_score: number;
+    braking_score: number;
+    turning_score: number;
+    weaving_score: number;
+    drifting_score: number;
+    speeding_score: number;
+    follow_score: number;
+    road_type: number;
+    temp_F: number;
+    humidity_pct: number;
+    wind_speed_mph: number;
+    wind_gust_mph: number;
+    condition: number;
+    day_night: number;
+    speed_mph: number;
+  };
 };
 
 const TripPage = () => {
@@ -169,6 +186,7 @@ const TripPage = () => {
       await updateTrip(tripId, {
         endDate: new Date().toISOString(),
         status: "FINISHED",
+        inputConduct: selectedTrip.inputConduct,
       });
 
       setTripStarted(false);

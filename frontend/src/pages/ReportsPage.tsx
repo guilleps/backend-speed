@@ -238,7 +238,7 @@ const ReportsPage = () => {
                     )}
                     <th className="text-left p-4 font-semibold text-ispeed-black">Destino</th>
                     <th className="text-left p-4 font-semibold text-ispeed-black">Duración</th>
-                    <th className="text-left p-4 font-semibold text-ispeed-black">Alertas</th>
+                    <th className="text-left p-4 font-semibold text-ispeed-black">Conducta</th>
                     <th className="text-left p-4 font-semibold text-ispeed-black">Respuesta</th>
                   </tr>
                 </thead>
@@ -252,7 +252,9 @@ const ReportsPage = () => {
                       <td className="p-4 text-gray-900">{trip.origin.name} - {trip.destination.name}</td>
                       <td className="p-4 text-gray-900">{calculateDuration(trip.startDate, trip.endDate)}</td>
                       <td className="p-4 text-gray-900">
-                        {trip.details?.length ?? 0}
+                        {trip.conduct
+                          ? trip.conduct.charAt(0).toUpperCase() + trip.conduct.slice(1).toLowerCase()
+                          : "Desconocida"}
                       </td>
                       <td className="p-4 text-gray-900">
                         {trip.details?.filter(d => d.responded).length ?? 0}/{trip.details?.length ?? 0}
