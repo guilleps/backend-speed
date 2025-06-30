@@ -1,4 +1,4 @@
-FROM node:22.14.0
+FROM node:22-alpine
 
 WORKDIR /usr/src/app
 
@@ -6,7 +6,6 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-COPY .env .env
 
 RUN npm run build
 
