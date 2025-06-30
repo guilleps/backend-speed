@@ -8,7 +8,18 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   app.enableCors({
-    origin: configService.get<string>('CORS_ORIGINS', 'http://localhost:5173'),
+    origin: (origin, callback) => {
+      const allowedOrigins = configService
+        .get<string>('CORS_ORIGINS', '')
+        .split(',')
+        .map((o) => o.trim());
+  
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error(`CORS blocked for origin: ${origin}`));
+      }
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
