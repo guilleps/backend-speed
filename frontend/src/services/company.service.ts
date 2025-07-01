@@ -7,9 +7,7 @@ export const createCompany = async (data: CreateCompanyDto): Promise<Company> =>
 }
 
 export const getName = async (): Promise<string> => {
-    const response = await apiClient.get<string>(`/companies/name`, {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<string>(`/companies/name`);
     return response.data;
 }
 

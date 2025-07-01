@@ -83,6 +83,12 @@ const TripPage = () => {
     return availableCities.find(available => available.id === id).name;
   }
 
+  const speak = (message: string) => {
+    const utterance = new SpeechSynthesisUtterance(message);
+    utterance.lang = "es-PE";
+    speechSynthesis.speak(utterance);
+  }
+
   useEffect(() => {
     let interval: NodeJS.Timeout;
 
@@ -107,6 +113,7 @@ const TripPage = () => {
           if (alertToTrigger) {
             setIsAlertActive(true);
             setActiveAlertMessage(alertToTrigger.mensaje);
+            speak(alertToTrigger.mensaje);
 
             setTimeout(() => {
               setIsAlertActive(false);

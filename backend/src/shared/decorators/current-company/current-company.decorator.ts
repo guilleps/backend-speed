@@ -4,6 +4,7 @@ import { AuthenticatedUser } from 'src/shared/interfaces/authenticated-user.inte
 export const CurrentCompany = createParamDecorator(
   (_data: unknown, ctx: ExecutionContext): AuthenticatedUser => {
     const request = ctx.switchToHttp().getRequest();
+    // console.log('[JwtGuard] Headers:', request.headers);
     return request.user;
   },
 );

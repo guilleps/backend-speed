@@ -2,7 +2,7 @@ import apiClient from "@/api/axios";
 import { CreateUserDto, GetAllUsersDto, User } from "@/dto/user.dto";
 
 export const createUser = async (data: CreateUserDto): Promise<User> => {
-    const response = await apiClient.post<User>('/users', data, { withCredentials: true });
+    const response = await apiClient.post<User>('/users', data);
     return response.data;
 }
 
@@ -27,9 +27,7 @@ export const getDriversByCompany = async (companyId: string): Promise<User[]> =>
 };
 
 export const getName = async (): Promise<string> => {
-    const response = await apiClient.get<string>(`/users/name`, {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<string>(`/users/name`);
     return response.data;
 }
 

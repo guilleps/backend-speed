@@ -3,7 +3,7 @@ import { ReportFilters } from "@/dto/report.dto";
 import { CreateTripDto, GetAllTripsDto, Trip } from "@/dto/trip.dto";
 
 export const createTrip = async (data: CreateTripDto): Promise<Trip> => {
-    const response = await apiClient.post<Trip>('/trips', data, { withCredentials: true });
+    const response = await apiClient.post<Trip>('/trips', data);
     return response.data;
 }
 
@@ -13,30 +13,22 @@ export const getTrips = async (): Promise<GetAllTripsDto[]> => {
 };
 
 export const getTripsByUser = async (): Promise<Trip[]> => {
-    const response = await apiClient.get<Trip[]>('/trips/by-user', {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<Trip[]>('/trips/by-user');
     return response.data;
 };
 
 export const getTripsByCompany = async (): Promise<Trip[]> => {
-    const response = await apiClient.get<Trip[]>('/trips/by-company', {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<Trip[]>('/trips/by-company');
     return response.data;
 };
 
 export const getTripCountByCompanyCurrentWeek = async (): Promise<number> => {
-    const response = await apiClient.get<number>('/trips/count/company/current-week', {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<number>('/trips/count/company/current-week');
     return response.data;
 };
 
 export const getTripCountByCompanyLastWeek = async (): Promise<number> => {
-    const response = await apiClient.get<number>('/trips/count/company/last-week', {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<number>('/trips/count/company/last-week');
     return response.data;
 };
 
@@ -52,9 +44,7 @@ export const getDestinationsByCompany = async (id: string): Promise<string[]> =>
 }
 
 export const getDestinationsByUser = async (): Promise<string[]> => {
-    const response = await apiClient.get<string[]>(`/trips/destinations/by-user`, {
-        withCredentials: true
-    });
+    const response = await apiClient.get<string[]>(`/trips/destinations/by-user`);
     return response.data;
 };
 
@@ -69,7 +59,6 @@ export const searchReports = async (filters: ReportFilters): Promise<Trip[]> => 
 
     const response = await apiClient.get<Trip[]>('/trips/search', {
         params,
-        withCredentials: true
     });
 
     return response.data;
@@ -90,8 +79,6 @@ export const deleteTrip = async (id: string): Promise<void> => {
 };
 
 export const getDynamicTrips = async (): Promise<Trip[]> => {
-    const response = await apiClient.get<Trip[]>('/trips/dynamic', {
-        withCredentials: true
-    });
+    const response = await apiClient.get<Trip[]>('/trips/dynamic');
     return response.data;
 };  

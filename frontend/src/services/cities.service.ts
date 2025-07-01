@@ -7,9 +7,7 @@ export const createCity = async (data: CreateCityDto): Promise<City> => {
 };
 
 export const getCities = async (): Promise<City[]> => {
-    const response = await apiClient.get<City[]>('/cities', {
-        withCredentials: true,
-    });
+    const response = await apiClient.get<City[]>('/cities');
     return response.data;
 };
 

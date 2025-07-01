@@ -101,16 +101,6 @@ const [alertResponseRate, setAlertResponseRate] = useState<number>(0);
     loadDashboardData();
   }, [user]);
 
-  // Datos simulados
-  const dashboardData = {
-    totalDrivers: 24,
-    activeTrips: 8,
-    totalDestinations: 12,
-    weeklyTrips: 156,
-    alertsThisWeek: 43,
-    responseRate: 94
-  };
-
   if (!user || user.role !== 'company') {
     navigate('/login');
     return null;
