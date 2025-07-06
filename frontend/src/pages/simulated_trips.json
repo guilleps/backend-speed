@@ -4,102 +4,102 @@
     "alertas": [
       {
         "segundo": 14,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "segundo": 25,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "segundo": 54,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Frenado brusco detectado, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 8,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "minuto": 19,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "minuto": 29,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "minuto": 32,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "minuto": 34,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "minuto": 42,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "minuto": 43,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "hora": 0.96,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "hora": 1.09,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "hora": 1.34,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
         "hora": 4.08,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": true
       },
       {
         "hora": 5.28,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "hora": 7.01,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "hora": 7.34,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 8.82,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "hora": 8.85,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "hora": 8.89,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona montañosa",
         "respondida": false
       }
     ],
@@ -126,82 +126,82 @@
     "alertas": [
       {
         "segundo": 43,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "segundo": 47,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "segundo": 57,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Conducción errática detectada, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 1,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       },
       {
         "minuto": 3,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "minuto": 8,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "hora": 0.15,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Cruce de peatones",
         "respondida": false
       },
       {
         "minuto": 20,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
         "minuto": 24,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       },
       {
         "minuto": 26,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "minuto": 33,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 0.69,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 2.98,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 3.61,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       },
       {
         "hora": 5.32,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "hora": 5.52,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
@@ -211,17 +211,17 @@
       },
       {
         "hora": 7.87,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "hora": 8.33,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "hora": 8.61,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Salida próxima",
         "respondida": true
       }
     ],
@@ -248,102 +248,102 @@
     "alertas": [
       {
         "segundo": 26,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "segundo": 33,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "segundo": 57,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Conducción errática detectada, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 17,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "minuto": 20,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "minuto": 22,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "minuto": 30,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "minuto": 41,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "minuto": 51,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": false
       },
       {
         "minuto": 54,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 3.13,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 3.59,
-        "mensaje": "Puente angosto",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "hora": 4.62,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "hora": 4.98,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "hora": 5.73,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "hora": 5.88,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "hora": 6.35,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "hora": 6.55,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "hora": 8.02,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "hora": 8.91,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       }
     ],
@@ -370,102 +370,102 @@
     "alertas": [
       {
         "segundo": 4,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "segundo": 10,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "segundo": 25,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Aceleración excesiva detectada, porfavor tomar precauciones",
         "respondida": false
       },
       {
         "minuto": 6,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       },
       {
         "minuto": 10,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 19,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "minuto": 27,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "minuto": 33,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "minuto": 34,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "minuto": 36,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 0.71,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "hora": 0.85,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 3.74,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "hora": 3.85,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       },
       {
         "hora": 4.05,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": false
       },
       {
         "hora": 5.89,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "hora": 6.16,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 6.7,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
         "hora": 7.18,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "hora": 7.4,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       }
     ],
@@ -492,102 +492,102 @@
     "alertas": [
       {
         "segundo": 7,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "segundo": 17,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "segundo": 28,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Giros peligrosos detectados, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 6,
-        "mensaje": "Tramo en reparaci\u00f3n",
-        "respondida": false
-      },
-      {
-        "minuto": 6,
-        "mensaje": "Tramo en reparaci\u00f3n",
-        "respondida": false
-      },
-      {
-        "minuto": 10,
-        "mensaje": "Zona de derrumbe",
-        "respondida": false
-      },
-      {
-        "hora": 0.36,
-        "mensaje": "Curva peligrosa",
-        "respondida": true
-      },
-      {
-        "minuto": 32,
-        "mensaje": "Puente angosto",
-        "respondida": true
-      },
-      {
-        "hora": 0.61,
-        "mensaje": "Puente angosto",
-        "respondida": true
-      },
-      {
-        "minuto": 38,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": false
-      },
-      {
-        "minuto": 39,
         "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
+        "minuto": 6,
+        "mensaje": "Tramo con historial de frenadas bruscas",
+        "respondida": false
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Salida próxima",
+        "respondida": false
+      },
+      {
+        "hora": 0.36,
+        "mensaje": "Inicio de tramo con doble sentido",
+        "respondida": true
+      },
+      {
+        "minuto": 32,
+        "mensaje": "Baja adherencia esperada",
+        "respondida": true
+      },
+      {
+        "hora": 0.61,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 38,
+        "mensaje": "Inicio de tramo con doble sentido",
+        "respondida": false
+      },
+      {
+        "minuto": 39,
+        "mensaje": "Zona rural próxima",
+        "respondida": false
+      },
+      {
         "minuto": 51,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "hora": 0.86,
-        "mensaje": "Puente angosto",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "hora": 0.97,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 0.98,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": false
       },
       {
         "hora": 2.61,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "hora": 3.96,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 6.1,
-        "mensaje": "Puente angosto",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "hora": 7.37,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       },
       {
         "hora": 7.38,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       }
     ],
@@ -614,107 +614,107 @@
     "alertas": [
       {
         "segundo": 33,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "segundo": 42,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "segundo": 57,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Conducción errática detectada, porfavor tomar precauciones",
         "respondida": false
       },
       {
         "minuto": 19,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "minuto": 25,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "minuto": 34,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "hora": 0.58,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       },
       {
         "minuto": 35,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "minuto": 36,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "minuto": 40,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "minuto": 60,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 1.02,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": false
       },
       {
         "hora": 2.08,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "hora": 2.25,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "hora": 2.31,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "hora": 2.75,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 6.34,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "hora": 6.75,
-        "mensaje": "Puente angosto",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "hora": 7.52,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "hora": 8.21,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Zona montañosa",
         "respondida": true
       }
     ],
     "inputConduct": {
-       "acceleration_score": 99.8,
+      "acceleration_score": 99.8,
       "braking_score": 100.0,
       "turning_score": 78.9,
       "weaving_score": 100.0,
@@ -736,107 +736,107 @@
     "alertas": [
       {
         "segundo": 3,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "segundo": 14,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "segundo": 26,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Conducción errática detectada, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 1,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "minuto": 11,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "hora": 0.23,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "minuto": 22,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "minuto": 30,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "minuto": 34,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "minuto": 46,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "minuto": 49,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "hora": 2.02,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 2.41,
-        "mensaje": "Puente angosto",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 2.52,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "hora": 2.76,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       },
       {
         "hora": 2.83,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "hora": 5.08,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 6.75,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "hora": 8.65,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 8.95,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       }
     ],
     "inputConduct": {
-       "acceleration_score": 98.6,
+      "acceleration_score": 98.6,
       "braking_score": 100.0,
       "turning_score": 100.0,
       "weaving_score": 100.0,
@@ -858,107 +858,107 @@
     "alertas": [
       {
         "segundo": 14,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "segundo": 16,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "segundo": 48,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Velocidad excesiva detectada, porfavor tomar precauciones",
         "respondida": false
       },
       {
         "minuto": 21,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "minuto": 24,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "minuto": 29,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "minuto": 33,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "minuto": 33,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "minuto": 45,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "minuto": 58,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "hora": 1.0,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "hora": 1.2,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 2.17,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 4.13,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "hora": 5.66,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "hora": 6.51,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 7.1,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 7.3,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 8.89,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 8.91,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Salida próxima",
         "respondida": true
       }
     ],
     "inputConduct": {
-       "acceleration_score": 100.0,
+      "acceleration_score": 100.0,
       "braking_score": 100.0,
       "turning_score": 83.6,
       "weaving_score": 100.0,
@@ -980,102 +980,102 @@
     "alertas": [
       {
         "segundo": 23,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "segundo": 49,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "segundo": 50,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Frenado brusco detectado, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "hora": 0.23,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "minuto": 18,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 37,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "minuto": 39,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "minuto": 46,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "hora": 0.82,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "minuto": 56,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
         "minuto": 58,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 58,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "hora": 2.07,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "hora": 3.61,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 3.89,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "hora": 4.41,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "hora": 6.91,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 7.78,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "hora": 8.57,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "hora": 8.65,
-        "mensaje": "Puente angosto",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       }
     ],
@@ -1102,102 +1102,102 @@
     "alertas": [
       {
         "segundo": 4,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "segundo": 26,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "segundo": 32,
-        "mensaje": "Se detectó conduccion agresiva, porfavor tomar precauciones",
+        "mensaje": "Velocidad excesiva detectada, porfavor tomar precauciones",
         "respondida": true
       },
       {
         "minuto": 2,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "minuto": 3,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "hora": 0.16,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "minuto": 16,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "minuto": 22,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "minuto": 37,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": true
       },
       {
         "hora": 0.64,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "minuto": 56,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "minuto": 59,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "hora": 3.18,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "hora": 3.61,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "hora": 5.47,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "hora": 5.94,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "hora": 6.73,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 7.72,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "hora": 8.59,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "hora": 8.96,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       }
     ],
@@ -1224,102 +1224,102 @@
     "alertas": [
       {
         "segundo": 1,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "segundo": 6,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "segundo": 23,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": false
-      },
-      {
-        "minuto": 16,
-        "mensaje": "Radar de velocidad",
-        "respondida": true
-      },
-      {
-        "minuto": 20,
-        "mensaje": "Cambio de carril obligatorio",
-        "respondida": false
-      },
-      {
-        "minuto": 21,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": true
-      },
-      {
-        "hora": 0.47,
-        "mensaje": "Cambio de carril obligatorio",
-        "respondida": false
-      },
-      {
-        "minuto": 31,
-        "mensaje": "Cruce de peatones",
-        "respondida": false
-      },
-      {
-        "minuto": 33,
-        "mensaje": "Radar de velocidad",
-        "respondida": true
-      },
-      {
-        "minuto": 34,
-        "mensaje": "Condiciones resbaladizas",
-        "respondida": false
-      },
-      {
-        "minuto": 53,
-        "mensaje": "Cambio de carril obligatorio",
-        "respondida": false
-      },
-      {
-        "hora": 2.7,
-        "mensaje": "Tr\u00e1fico denso",
-        "respondida": false
-      },
-      {
-        "hora": 2.71,
-        "mensaje": "Zona de derrumbe",
-        "respondida": false
-      },
-      {
-        "hora": 2.95,
         "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
-        "hora": 4.01,
+        "minuto": 16,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 20,
+        "mensaje": "Zona escolar próxima",
+        "respondida": false
+      },
+      {
+        "minuto": 21,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "hora": 0.47,
         "mensaje": "Zona con alta accidentabilidad",
         "respondida": false
       },
       {
+        "minuto": 31,
+        "mensaje": "Límite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "minuto": 33,
+        "mensaje": "Entrada a zona sin cobertura GPS",
+        "respondida": true
+      },
+      {
+        "minuto": 34,
+        "mensaje": "Fin de vía rápida",
+        "respondida": false
+      },
+      {
+        "minuto": 53,
+        "mensaje": "Tramo con historial de frenadas bruscas",
+        "respondida": false
+      },
+      {
+        "hora": 2.7,
+        "mensaje": "Túnel próximo",
+        "respondida": false
+      },
+      {
+        "hora": 2.71,
+        "mensaje": "Salida próxima",
+        "respondida": false
+      },
+      {
+        "hora": 2.95,
+        "mensaje": "Baja adherencia esperada",
+        "respondida": false
+      },
+      {
+        "hora": 4.01,
+        "mensaje": "¡Atención! Niebla en ruta",
+        "respondida": false
+      },
+      {
         "hora": 4.3,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "hora": 6.87,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "hora": 8.38,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "hora": 8.46,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "hora": 8.49,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       }
     ],
@@ -1346,107 +1346,107 @@
     "alertas": [
       {
         "segundo": 33,
-        "mensaje": "Desv\u00edo adelante",
-        "respondida": true
-      },
-      {
-        "segundo": 45,
-        "mensaje": "Desv\u00edo adelante",
-        "respondida": false
-      },
-      {
-        "segundo": 49,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
-        "respondida": false
-      },
-      {
-        "minuto": 10,
-        "mensaje": "Radar de velocidad",
-        "respondida": false
-      },
-      {
-        "minuto": 12,
-        "mensaje": "Animales en la v\u00eda",
-        "respondida": true
-      },
-      {
-        "minuto": 17,
-        "mensaje": "L\u00edmite de velocidad reducido",
-        "respondida": true
-      },
-      {
-        "minuto": 21,
-        "mensaje": "Cambio de carril obligatorio",
-        "respondida": true
-      },
-      {
-        "minuto": 23,
-        "mensaje": "Baches en la carretera",
-        "respondida": false
-      },
-      {
-        "minuto": 35,
-        "mensaje": "Animales en la v\u00eda",
-        "respondida": true
-      },
-      {
-        "minuto": 47,
-        "mensaje": "Tr\u00e1fico denso",
-        "respondida": false
-      },
-      {
-        "hora": 0.8,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
-        "respondida": true
-      },
-      {
-        "hora": 0.87,
         "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
+        "segundo": 45,
+        "mensaje": "Zona montañosa",
+        "respondida": false
+      },
+      {
+        "segundo": 49,
+        "mensaje": "Inicio de descenso prolongado",
+        "respondida": false
+      },
+      {
+        "minuto": 10,
+        "mensaje": "Zona rural próxima",
+        "respondida": false
+      },
+      {
+        "minuto": 12,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 17,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "minuto": 21,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 23,
+        "mensaje": "¡Atención! Niebla en ruta",
+        "respondida": false
+      },
+      {
+        "minuto": 35,
+        "mensaje": "Cruce de peatones",
+        "respondida": true
+      },
+      {
+        "minuto": 47,
+        "mensaje": "Zona montañosa",
+        "respondida": false
+      },
+      {
+        "hora": 0.8,
+        "mensaje": "Zona montañosa",
+        "respondida": true
+      },
+      {
+        "hora": 0.87,
+        "mensaje": "Tramo con historial de frenadas bruscas",
+        "respondida": true
+      },
+      {
         "hora": 0.95,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 3.54,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 4.2,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 4.63,
-        "mensaje": "Puente angosto",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "hora": 5.06,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "hora": 5.19,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 6.76,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "hora": 8.93,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona montañosa",
         "respondida": false
       }
     ],
     "inputConduct": {
-       "acceleration_score": 76.1,
+      "acceleration_score": 76.1,
       "braking_score": 98.1,
       "turning_score": 100.0,
       "weaving_score": 100.0,
@@ -1468,107 +1468,107 @@
     "alertas": [
       {
         "segundo": 1,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "segundo": 42,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "segundo": 50,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "minuto": 1,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 12,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "minuto": 17,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "minuto": 39,
-        "mensaje": "Puente angosto",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": true
       },
       {
         "minuto": 44,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "minuto": 45,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
-        "respondida": false
-      },
-      {
-        "minuto": 60,
-        "mensaje": "Zona con alta accidentabilidad",
-        "respondida": false
-      },
-      {
-        "hora": 1.59,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": true
-      },
-      {
-        "hora": 2.16,
-        "mensaje": "Curva peligrosa",
-        "respondida": false
-      },
-      {
-        "hora": 2.2,
-        "mensaje": "Radar de velocidad",
-        "respondida": false
-      },
-      {
-        "hora": 3.44,
-        "mensaje": "Zona escolar pr\u00f3xima",
-        "respondida": false
-      },
-      {
-        "hora": 5.08,
-        "mensaje": "Desv\u00edo adelante",
-        "respondida": false
-      },
-      {
-        "hora": 5.5,
-        "mensaje": "Zona de derrumbe",
-        "respondida": false
-      },
-      {
-        "hora": 5.54,
-        "mensaje": "\u00a1Reduce la velocidad!",
-        "respondida": false
-      },
-      {
-        "hora": 5.66,
-        "mensaje": "Condiciones resbaladizas",
-        "respondida": false
-      },
-      {
-        "hora": 6.82,
         "mensaje": "Cruce de peatones",
         "respondida": false
       },
       {
+        "minuto": 60,
+        "mensaje": "Inicio de tramo con doble sentido",
+        "respondida": false
+      },
+      {
+        "hora": 1.59,
+        "mensaje": "Fin de vía rápida",
+        "respondida": true
+      },
+      {
+        "hora": 2.16,
+        "mensaje": "Túnel próximo",
+        "respondida": false
+      },
+      {
+        "hora": 2.2,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 3.44,
+        "mensaje": "Límite de velocidad reducido",
+        "respondida": false
+      },
+      {
+        "hora": 5.08,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 5.5,
+        "mensaje": "Zona con alta accidentabilidad",
+        "respondida": false
+      },
+      {
+        "hora": 5.54,
+        "mensaje": "Zona escolar próxima",
+        "respondida": false
+      },
+      {
+        "hora": 5.66,
+        "mensaje": "Fin de vía rápida",
+        "respondida": false
+      },
+      {
+        "hora": 6.82,
+        "mensaje": "Zona escolar próxima",
+        "respondida": false
+      },
+      {
         "hora": 8.06,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       }
     ],
     "inputConduct": {
-       "acceleration_score": 95.4,
+      "acceleration_score": 95.4,
       "braking_score": 99.9,
       "turning_score": 91.4,
       "weaving_score": 0.0,
@@ -1590,42 +1590,42 @@
     "alertas": [
       {
         "segundo": 20,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "segundo": 51,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "segundo": 60,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "minuto": 1,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "minuto": 8,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "minuto": 16,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": false
       },
       {
         "minuto": 24,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "minuto": 26,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
@@ -1635,57 +1635,57 @@
       },
       {
         "minuto": 42,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 1.21,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "hora": 4.0,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": true
       },
       {
         "hora": 4.92,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 5.07,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "hora": 5.49,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 6.39,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "hora": 6.49,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "hora": 6.63,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": true
       },
       {
         "hora": 6.74,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "hora": 8.93,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Cruce de peatones",
         "respondida": false
       }
     ],
@@ -1712,107 +1712,107 @@
     "alertas": [
       {
         "segundo": 24,
-        "mensaje": "Puente angosto",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "segundo": 38,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "segundo": 56,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "minuto": 10,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "hora": 0.23,
-        "mensaje": "Puente angosto",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "minuto": 21,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "minuto": 24,
-        "mensaje": "Cruce de peatones",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "minuto": 28,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "hora": 0.47,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "minuto": 36,
-        "mensaje": "Zona con alta accidentabilidad",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "minuto": 47,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Salida próxima",
         "respondida": true
       },
       {
         "minuto": 49,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 1.26,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
         "hora": 1.77,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 4.85,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "hora": 5.36,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 5.4,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 5.48,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 6.14,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 7.36,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": false
       }
     ],
     "inputConduct": {
-       "acceleration_score": 77.4,
+      "acceleration_score": 77.4,
       "braking_score": 10.2,
       "turning_score": 90.3,
       "weaving_score": 14.3,
@@ -1834,102 +1834,102 @@
     "alertas": [
       {
         "segundo": 14,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "segundo": 21,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "segundo": 32,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": false
       },
       {
         "minuto": 8,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       },
       {
         "minuto": 20,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Cruce de peatones",
         "respondida": false
       },
       {
         "minuto": 20,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "minuto": 23,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": false
-      },
-      {
-        "minuto": 30,
-        "mensaje": "Desv\u00edo adelante",
-        "respondida": false
-      },
-      {
-        "hora": 0.79,
-        "mensaje": "Zona de derrumbe",
-        "respondida": true
-      },
-      {
-        "minuto": 56,
-        "mensaje": "Tr\u00e1fico denso",
-        "respondida": false
-      },
-      {
-        "minuto": 60,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": false
-      },
-      {
-        "hora": 1.15,
-        "mensaje": "Puente angosto",
-        "respondida": false
-      },
-      {
-        "hora": 1.7,
-        "mensaje": "Cambio de carril obligatorio",
-        "respondida": true
-      },
-      {
-        "hora": 1.77,
-        "mensaje": "\u00a1Reduce la velocidad!",
-        "respondida": false
-      },
-      {
-        "hora": 2.59,
-        "mensaje": "Animales en la v\u00eda",
-        "respondida": true
-      },
-      {
-        "hora": 4.0,
-        "mensaje": "Puente angosto",
-        "respondida": false
-      },
-      {
-        "hora": 5.28,
-        "mensaje": "Puente angosto",
-        "respondida": false
-      },
-      {
-        "hora": 6.44,
-        "mensaje": "\u00a1Reduce la velocidad!",
-        "respondida": false
-      },
-      {
-        "hora": 6.97,
         "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
-        "hora": 7.82,
+        "minuto": 30,
         "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 0.79,
+        "mensaje": "Zona urbana próxima",
+        "respondida": true
+      },
+      {
+        "minuto": 56,
+        "mensaje": "Inicio de tramo con doble sentido",
+        "respondida": false
+      },
+      {
+        "minuto": 60,
+        "mensaje": "Zona escolar próxima",
+        "respondida": false
+      },
+      {
+        "hora": 1.15,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 1.7,
+        "mensaje": "¡Atención! Niebla en ruta",
+        "respondida": true
+      },
+      {
+        "hora": 1.77,
+        "mensaje": "Zona montañosa",
+        "respondida": false
+      },
+      {
+        "hora": 2.59,
+        "mensaje": "Curva peligrosa",
+        "respondida": true
+      },
+      {
+        "hora": 4.0,
+        "mensaje": "Tramo con historial de frenadas bruscas",
+        "respondida": false
+      },
+      {
+        "hora": 5.28,
+        "mensaje": "Tramo con historial de frenadas bruscas",
+        "respondida": false
+      },
+      {
+        "hora": 6.44,
+        "mensaje": "Baja adherencia esperada",
+        "respondida": false
+      },
+      {
+        "hora": 6.97,
+        "mensaje": "Inicio de tramo con doble sentido",
+        "respondida": false
+      },
+      {
+        "hora": 7.82,
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       }
     ],
@@ -1956,102 +1956,102 @@
     "alertas": [
       {
         "segundo": 27,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "segundo": 33,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "segundo": 59,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "minuto": 9,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "minuto": 16,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": true
       },
       {
         "minuto": 21,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "minuto": 35,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "minuto": 41,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": false
-      },
-      {
-        "minuto": 46,
-        "mensaje": "Zona de derrumbe",
-        "respondida": true
-      },
-      {
-        "minuto": 58,
         "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
+        "minuto": 46,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 58,
+        "mensaje": "Túnel próximo",
+        "respondida": false
+      },
+      {
         "hora": 1.2,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "hora": 1.92,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "hora": 2.44,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": true
       },
       {
         "hora": 2.9,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "hora": 4.76,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 4.91,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "hora": 5.49,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": true
       },
       {
         "hora": 5.5,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 7.99,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 8.34,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       }
     ],
@@ -2078,102 +2078,102 @@
     "alertas": [
       {
         "segundo": 9,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "segundo": 31,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Baja adherencia esperada",
         "respondida": false
       },
       {
         "segundo": 36,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": true
       },
       {
         "minuto": 12,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "minuto": 15,
-        "mensaje": "Zona de derrumbe",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 23,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "minuto": 27,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona montañosa",
         "respondida": true
       },
       {
         "minuto": 38,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona rural próxima",
         "respondida": true
       },
       {
         "minuto": 40,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "minuto": 45,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": false
       },
       {
         "hora": 2.86,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Salida próxima",
         "respondida": false
       },
       {
         "hora": 4.07,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Fin de vía rápida",
         "respondida": true
       },
       {
         "hora": 4.24,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": true
       },
       {
         "hora": 4.74,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Cruce de peatones",
         "respondida": true
       },
       {
         "hora": 5.0,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 5.08,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona escolar próxima",
         "respondida": false
       },
       {
         "hora": 5.57,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "hora": 6.12,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "hora": 6.78,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "hora": 8.33,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": false
       }
     ],
@@ -2200,102 +2200,102 @@
     "alertas": [
       {
         "segundo": 7,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Ingreso a carretera interprovincial",
         "respondida": true
       },
       {
         "segundo": 10,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "segundo": 53,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": false
       },
       {
         "minuto": 11,
-        "mensaje": "Cambio de carril obligatorio",
+        "mensaje": "Entrada a zona sin cobertura GPS",
         "respondida": true
       },
       {
         "minuto": 18,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "minuto": 26,
-        "mensaje": "Tr\u00e1fico denso",
+        "mensaje": "Curva peligrosa",
         "respondida": true
       },
       {
         "minuto": 34,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Curva peligrosa",
         "respondida": false
       },
       {
         "hora": 0.64,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "minuto": 41,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona escolar próxima",
         "respondida": true
       },
       {
         "minuto": 46,
-        "mensaje": "Puente angosto",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "minuto": 49,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "hora": 1.9,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Zona urbana próxima",
         "respondida": true
       },
       {
         "hora": 2.11,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Fin de vía rápida",
         "respondida": false
       },
       {
         "hora": 3.1,
-        "mensaje": "Desv\u00edo adelante",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 3.21,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Inicio de tramo con doble sentido",
         "respondida": true
       },
       {
         "hora": 4.01,
-        "mensaje": "Animales en la v\u00eda",
+        "mensaje": "Zona de neblina frecuente",
         "respondida": false
       },
       {
         "hora": 4.91,
-        "mensaje": "Salida pr\u00f3xima",
+        "mensaje": "Baja adherencia esperada",
         "respondida": true
       },
       {
         "hora": 5.06,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "hora": 5.33,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": false
       },
       {
         "hora": 6.03,
-        "mensaje": "Zona escolar pr\u00f3xima",
+        "mensaje": "Zona montañosa",
         "respondida": true
       }
     ],
@@ -2322,102 +2322,102 @@
     "alertas": [
       {
         "segundo": 21,
-        "mensaje": "Baches en la carretera",
+        "mensaje": "Túnel próximo",
         "respondida": false
       },
       {
         "segundo": 58,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Inicio de descenso prolongado",
         "respondida": true
       },
       {
         "segundo": 59,
-        "mensaje": "Condiciones resbaladizas",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "minuto": 8,
-        "mensaje": "Curva peligrosa",
+        "mensaje": "¡Atención! Niebla en ruta",
         "respondida": false
       },
       {
         "minuto": 13,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Peligro de deslizamiento por viento lateral",
         "respondida": false
       },
       {
         "minuto": 42,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
+        "mensaje": "Zona montañosa",
         "respondida": false
       },
       {
         "minuto": 54,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Zona rural próxima",
         "respondida": false
       },
       {
         "minuto": 55,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": true
-      },
-      {
-        "minuto": 60,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
-        "respondida": true
-      },
-      {
-        "minuto": 60,
-        "mensaje": "\u00a1Reduce la velocidad!",
-        "respondida": false
-      },
-      {
-        "hora": 1.04,
-        "mensaje": "Animales en la v\u00eda",
-        "respondida": true
-      },
-      {
-        "hora": 2.05,
-        "mensaje": "Desv\u00edo adelante",
-        "respondida": false
-      },
-      {
-        "hora": 2.6,
-        "mensaje": "T\u00fanel pr\u00f3ximo",
-        "respondida": false
-      },
-      {
-        "hora": 4.31,
         "mensaje": "Zona con alta accidentabilidad",
         "respondida": true
       },
       {
+        "minuto": 60,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": true
+      },
+      {
+        "minuto": 60,
+        "mensaje": "Salida próxima",
+        "respondida": false
+      },
+      {
+        "hora": 1.04,
+        "mensaje": "Salida próxima",
+        "respondida": true
+      },
+      {
+        "hora": 2.05,
+        "mensaje": "Curva peligrosa",
+        "respondida": false
+      },
+      {
+        "hora": 2.6,
+        "mensaje": "Condiciones resbaladizas",
+        "respondida": false
+      },
+      {
+        "hora": 4.31,
+        "mensaje": "Zona de neblina frecuente",
+        "respondida": true
+      },
+      {
         "hora": 7.39,
-        "mensaje": "\u00a1Atenci\u00f3n! Niebla en ruta",
+        "mensaje": "Condiciones resbaladizas",
         "respondida": false
       },
       {
         "hora": 7.84,
-        "mensaje": "L\u00edmite de velocidad reducido",
+        "mensaje": "Zona urbana próxima",
         "respondida": false
       },
       {
         "hora": 8.3,
-        "mensaje": "\u00a1Reduce la velocidad!",
+        "mensaje": "Tramo con historial de frenadas bruscas",
         "respondida": true
       },
       {
         "hora": 8.44,
-        "mensaje": "Tramo en reparaci\u00f3n",
+        "mensaje": "Túnel próximo",
         "respondida": true
       },
       {
         "hora": 8.68,
-        "mensaje": "Control policial cercano",
+        "mensaje": "Límite de velocidad reducido",
         "respondida": false
       },
       {
         "hora": 8.82,
-        "mensaje": "Radar de velocidad",
+        "mensaje": "Túnel próximo",
         "respondida": false
       }
     ],

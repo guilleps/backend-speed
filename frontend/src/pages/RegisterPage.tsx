@@ -21,7 +21,9 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errorsStep1, setErrorsStep1] = useState<Record<string, string>>({});
+  const [errorsStep2, setErrorsStep2] = useState<Record<string, string>>({});
+  const [submitAttempted, setSubmitAttempted] = useState(false);
 
   const navigate = useNavigate();
   const { register } = useAuth();
@@ -30,54 +32,100 @@ const RegisterPage = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    if (name === 'phone') {
+      const cleaned = value.replace(/[^\d-]/g, '');
+      const dashCount = (cleaned.match(/-/g) || []).length;
+      if (dashCount > 1 || (dashCount === 1 && cleaned.indexOf('-') !== 2)) return;
+      const digitsOnly = cleaned.replace(/-/g, '');
+      if (digitsOnly.length > 9) return;
+      setFormData(prev => ({ ...prev, [name]: cleaned }));
+    }
 
-    // Clear error when field is edited
-    if (errors[name]) {
-      setErrors(prev => {
-        const newErrors = { ...prev };
-        delete newErrors[name];
-        return newErrors;
+    else if (name === 'ruc') {
+      const numericValue = value.replace(/\D/g, '');
+      if (numericValue.length > 11) return;
+      setFormData(prev => ({ ...prev, [name]: numericValue }));
+    }
+
+    else if (name === 'name') {
+      // Solo letras, espacios, números, punto y coma (, .)
+      const validValue = value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ0-9.,\s]/g, '');
+      setFormData(prev => ({ ...prev, [name]: validValue }));
+    }
+
+    else if (name === 'address') {
+      // Igual que 'name', pero permite también "#"
+      const validValue = value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ0-9.,#\s]/g, '');
+      setFormData(prev => ({ ...prev, [name]: validValue }));
+    }
+
+    else if (name === 'password' || name === 'confirmPassword') {
+      // No permitir espacios en la contraseña
+      const valueNoSpaces = value.replace(/\s/g, '');
+      setFormData(prev => ({ ...prev, [name]: valueNoSpaces }));
+    }
+
+    else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
+
+    if (step === 1 && errorsStep1[name]) {
+      setErrorsStep1(prev => {
+        const n = { ...prev };
+        delete n[name];
+        return n;
+      });
+    }
+    if (step === 2 && errorsStep2[name]) {
+      setErrorsStep2(prev => {
+        const n = { ...prev };
+        delete n[name];
+        return n;
       });
     }
   };
 
-  const validateStep = (currentStep: number) => {
+  const validateStep1 = () => {
     const newErrors: Record<string, string> = {};
-
-    if (currentStep === 1) {
-      if (!formData.name.trim()) newErrors.name = "El nombre de la empresa es requerido";
-      if (!formData.ruc.trim()) newErrors.ruc = "El RUC es requerido";
-      else if (!/^\d{11}$/.test(formData.ruc)) newErrors.ruc = "El RUC debe tener 11 dígitos";
-
-      if (!formData.address.trim()) newErrors.address = "La dirección es requerida";
-      if (!formData.phone.trim()) newErrors.phone = "El teléfono es requerido";
-    } else if (currentStep === 2) {
-      if (!formData.email.trim()) newErrors.email = "El correo electrónico es requerido";
-      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Formato de correo inválido";
-
-      if (!formData.password) newErrors.password = "La contraseña es requerida";
-      else if (formData.password.length < 8) newErrors.password = "La contraseña debe tener al menos 8 caracteres";
-
-      if (!formData.confirmPassword) newErrors.confirmPassword = "Confirme su contraseña";
-      else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = "Las contraseñas no coinciden";
+    if (!formData.name.trim()) newErrors.name = "El nombre de la empresa es requerido";
+    if (!formData.ruc.trim()) newErrors.ruc = "El RUC es requerido";
+    else if (!/^\d{11}$/.test(formData.ruc)) newErrors.ruc = "El RUC debe tener 11 dígitos";
+    if (!formData.address.trim()) newErrors.address = "La dirección es requerida";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "El teléfono es requerido";
+    } else {
+      const digitsOnly = formData.phone.replace(/-/g, '');
+      if (!/^\d{9}$/.test(digitsOnly)) {
+        newErrors.phone = "El teléfono debe contener 9 dígitos numéricos";
+      }
     }
+    setErrorsStep1(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-    setErrors(newErrors);
+  const validateStep2 = () => {
+    const newErrors: Record<string, string> = {};
+    if (!formData.email.trim()) newErrors.email = "El correo electrónico es requerido";
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Formato de correo inválido";
+    if (!formData.password) newErrors.password = "La contraseña es requerida";
+    else if (formData.password.length < 8) newErrors.password = "La contraseña debe tener al menos 8 caracteres";
+    else if (formData.password.length > 16) newErrors.password = "La contraseña no debe exceder 16 caracteres";
+    if (!formData.confirmPassword) newErrors.confirmPassword = "Confirme su contraseña";
+    else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = "Las contraseñas no coinciden";
+    setErrorsStep2(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const nextStep = () => {
-    if (validateStep(step)) {
+    if (validateStep1()) {
       setStep(prev => prev + 1);
+      setSubmitAttempted(false);
     }
   };
 
   const prevStep = () => {
     setStep(prev => prev - 1);
+    setSubmitAttempted(false);
   };
 
   const getPasswordStrength = () => {
@@ -98,13 +146,13 @@ const RegisterPage = () => {
     };
   };
 
+  const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>({});
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!validateStep(2)) return;
-
+    setSubmitAttempted(true);
+    if (!validateStep2()) return;
     setLoading(true);
-
     try {
       await register(formData);
       toast({
@@ -124,6 +172,8 @@ const RegisterPage = () => {
   };
 
   const passwordStrength = getPasswordStrength();
+
+  const errors = step === 1 ? errorsStep1 : (submitAttempted ? errorsStep2 : {});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-ispeed-gray to-white py-12 px-4">
@@ -171,84 +221,101 @@ const RegisterPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {step === 1 && (
-                <>
-                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-                    <div>
-                      <Label htmlFor="name" className="text-ispeed-black font-medium">
-                        Nombre de la Empresa *
-                      </Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Transportes ABC S.A.C."
-                        className={`mt-1 ${errors.name ? 'border-red-500' : ''}`}
-                      />
-                      {errors.name && (
-                        <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                      )}
-                    </div>
-
-                    <div>
-                      <Label htmlFor="ruc" className="text-ispeed-black font-medium">
-                        RUC *
-                      </Label>
-                      <Input
-                        id="ruc"
-                        name="ruc"
-                        value={formData.ruc}
-                        onChange={handleChange}
-                        placeholder="20123456789"
-                        className={`mt-1 ${errors.ruc ? 'border-red-500' : ''}`}
-                      />
-                      {errors.ruc && (
-                        <p className="text-red-500 text-sm mt-1">{errors.ruc}</p>
-                      )}
-                    </div>
+            {step === 1 && (
+              <div>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
+                  <div>
+                    <Label htmlFor="name" className="text-ispeed-black font-medium">
+                      Nombre de la Empresa *
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Transportes ABC S.A.C."
+                      maxLength={35}
+                      className={`mt-1 ${errors.name ? 'border-red-500' : ''}`}
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                    )}
                   </div>
-
-                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-                    <div>
-                      <Label htmlFor="address" className="text-ispeed-black font-medium">
-                        Dirección *
-                      </Label>
-                      <Input
-                        id="address"
-                        name="address"
-                        value={formData.address}
-                        onChange={handleChange}
-                        placeholder="Av. Principal 123, Lima, Perú"
-                        className={`mt-1 ${errors.address ? 'border-red-500' : ''}`}
-                      />
-                      {errors.address && (
-                        <p className="text-red-500 text-sm mt-1">{errors.address}</p>
-                      )}
-                    </div>
-
-                    <div>
-                      <Label htmlFor="phone" className="text-ispeed-black font-medium">
-                        Teléfono de la Empresa *
-                      </Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="01-2345678"
-                        className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`}
-                      />
-                      {errors.phone && (
-                        <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-                      )}
-                    </div>
+                  <div>
+                    <Label htmlFor="ruc" className="text-ispeed-black font-medium">
+                      RUC *
+                    </Label>
+                    <Input
+                      id="ruc"
+                      name="ruc"
+                      value={formData.ruc}
+                      onChange={handleChange}
+                      placeholder="20123456789"
+                      maxLength={11}
+                      className={`mt-1 ${errors.ruc ? 'border-red-500' : ''}`}
+                    />
+                    {errors.ruc && (
+                      <p className="text-red-500 text-sm mt-1">{errors.ruc}</p>
+                    )}
                   </div>
-                </>
-              )}
-
-              {step === 2 && (
+                </div>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
+                  <div>
+                    <Label htmlFor="address" className="text-ispeed-black font-medium">
+                      Dirección *
+                    </Label>
+                    <Input
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="Av. Principal 123, Lima, Perú"
+                      maxLength={35}
+                      className={`mt-1 ${errors.address ? 'border-red-500' : ''}`}
+                    />
+                    {errors.address && (
+                      <p className="text-red-500 text-sm mt-1">{errors.address}</p>
+                    )}
+                  </div>
+                  <div>
+                    <Label htmlFor="phone" className="text-ispeed-black font-medium">
+                      Teléfono de la Empresa *
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="01-2345678"
+                      className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`}
+                    />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                    )}
+                  </div>
+                </div>
+                <div className="flex justify-between mt-8">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => navigate("/")}
+                    className="border-gray-300 text-gray-600 hover:bg-gray-100"
+                  >
+                    <ChevronLeft className="mr-1 h-4 w-4" />
+                    Volver
+                  </Button>
+                  <Button
+                    type="button"
+                    onClick={nextStep}
+                    className="bg-ispeed-red hover:bg-red-700 text-white"
+                  >
+                    Siguiente
+                  </Button>
+                </div>
+              </div>
+            )}
+            {step === 2 && (
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-6">
                   <div>
                     <Label htmlFor="email" className="text-ispeed-black font-medium">
@@ -261,13 +328,13 @@ const RegisterPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="contacto@empresa.com"
+                      maxLength={30}
                       className={`mt-1 ${errors.email ? 'border-red-500' : ''}`}
                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm mt-1">{errors.email}</p>
                     )}
                   </div>
-
                   <div>
                     <Label htmlFor="password" className="text-ispeed-black font-medium">
                       Contraseña *
@@ -280,6 +347,7 @@ const RegisterPage = () => {
                         value={formData.password}
                         onChange={handleChange}
                         placeholder="••••••••"
+                        maxLength={16}
                         className={`mt-1 pr-10 ${errors.password ? 'border-red-500' : ''}`}
                       />
                       <button
@@ -293,7 +361,6 @@ const RegisterPage = () => {
                     {errors.password && (
                       <p className="text-red-500 text-sm mt-1">{errors.password}</p>
                     )}
-
                     {formData.password && (
                       <div className="mt-2">
                         <div className="flex items-center">
@@ -313,6 +380,9 @@ const RegisterPage = () => {
                           <li className={formData.password.length >= 8 ? 'text-green-500' : ''}>
                             • Mínimo 8 caracteres
                           </li>
+                          <li className={formData.password.length <= 16 ? 'text-green-500' : ''}>
+                            • Máximo 16 caracteres
+                          </li>
                           <li className={/[A-Z]/.test(formData.password) ? 'text-green-500' : ''}>
                             • Al menos una letra mayúscula
                           </li>
@@ -326,7 +396,6 @@ const RegisterPage = () => {
                       </div>
                     )}
                   </div>
-
                   <div>
                     <Label htmlFor="confirmPassword" className="text-ispeed-black font-medium">
                       Confirmar Contraseña *
@@ -339,6 +408,7 @@ const RegisterPage = () => {
                         value={formData.confirmPassword}
                         onChange={handleChange}
                         placeholder="••••••••"
+                        maxLength={16}
                         className={`mt-1 ${errors.confirmPassword ? 'border-red-500' : ''}`}
                       />
                     </div>
@@ -347,10 +417,7 @@ const RegisterPage = () => {
                     )}
                   </div>
                 </div>
-              )}
-
-              <div className="flex justify-between mt-8">
-                {step > 1 ? (
+                <div className="flex justify-between mt-8">
                   <Button
                     type="button"
                     variant="outline"
@@ -360,27 +427,6 @@ const RegisterPage = () => {
                     <ChevronLeft className="mr-1 h-4 w-4" />
                     Anterior
                   </Button>
-                ) : (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={() => navigate("/")}
-                    className="border-gray-300 text-gray-600 hover:bg-gray-100"
-                  >
-                    <ChevronLeft className="mr-1 h-4 w-4" />
-                    Volver
-                  </Button>
-                )}
-
-                {step < 2 ? (
-                  <Button
-                    type="button"
-                    onClick={nextStep}
-                    className="bg-ispeed-red hover:bg-red-700 text-white"
-                  >
-                    Siguiente
-                  </Button>
-                ) : (
                   <Button
                     type="submit"
                     className="bg-ispeed-red hover:bg-red-700 text-white"
@@ -388,9 +434,9 @@ const RegisterPage = () => {
                   >
                     {loading ? "Registrando..." : "Registrar Empresa"}
                   </Button>
-                )}
-              </div>
-            </form>
+                </div>
+              </form>
+            )}
 
             <div className="mt-6 text-center">
               <p className="text-gray-600">

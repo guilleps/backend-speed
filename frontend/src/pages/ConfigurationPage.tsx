@@ -320,8 +320,8 @@ const ConfigurationPage = () => {
                 <Textarea
                   id="address"
                   value={companyData.address}
-                  onChange={(e) => setCompanyData(prev => ({ ...prev, address: e.target.value }))}
-                  className="mt-1"
+                  readOnly
+                  className="mt-1 bg-gray-50 cursor-not-allowed"
                 />
               </div>
 
@@ -330,12 +330,12 @@ const ConfigurationPage = () => {
                 <Input
                   id="phone"
                   value={companyData.phone}
-                  onChange={(e) => setCompanyData(prev => ({ ...prev, phone: e.target.value }))}
-                  className="mt-1"
+                  readOnly
+                  className="mt-1 bg-gray-50 cursor-not-allowed"
                 />
               </div>
 
-              <div className="flex justify-end">
+              {/* <div className="flex justify-end">
                 <Button
                   onClick={() => {
                     toast({
@@ -347,7 +347,7 @@ const ConfigurationPage = () => {
                 >
                   Guardar
                 </Button>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
         )}
@@ -369,8 +369,12 @@ const ConfigurationPage = () => {
                     <Input
                       id="driverName"
                       value={newDriver.name}
-                      onChange={(e) => setNewDriver(prev => ({ ...prev, name: e.target.value }))}
-                      placeholder="Juan Pérez"
+                      onChange={e => {
+                        const value = e.target.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
+                        setNewDriver(prev => ({ ...prev, name: value }));
+                      }}
+                      placeholder="Juan Peréz"
+                      maxLength={20}
                       className="mt-1"
                     />
                   </div>
@@ -378,10 +382,13 @@ const ConfigurationPage = () => {
                     <Label htmlFor="driverEmail">Correo Electrónico</Label>
                     <Input
                       id="driverEmail"
-                      type="email"
                       value={newDriver.email}
-                      onChange={(e) => setNewDriver(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder="juan@correo.com"
+                      onChange={e => {
+                        const value = e.target.value.replace(/[^A-Za-z0-9@._-]/g, '');
+                        setNewDriver(prev => ({ ...prev, email: value }));
+                      }}
+                      placeholder="juan@gmail.com"
+                      maxLength={30}
                       className="mt-1"
                     />
                   </div>
@@ -390,8 +397,12 @@ const ConfigurationPage = () => {
                     <Input
                       id="driverPassword"
                       value={newDriver.password}
-                      onChange={(e) => setNewDriver(prev => ({ ...prev, password: e.target.value }))}
-                      placeholder="987654321"
+                      onChange={e => {
+                        const value = e.target.value.replace(/\s/g, '');
+                        setNewDriver(prev => ({ ...prev, password: value }));
+                      }}
+                      placeholder="••••••••"
+                      maxLength={16}
                       className="mt-1"
                     />
                   </div>
@@ -442,7 +453,7 @@ const ConfigurationPage = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-between mt-6">
+                {/* <div className="flex justify-between mt-6">
                   <Button
                     variant="outline"
                     onClick={() => setActiveStep(1)}
@@ -461,7 +472,7 @@ const ConfigurationPage = () => {
                   >
                     Guardar
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>
@@ -484,8 +495,12 @@ const ConfigurationPage = () => {
                     <Input
                       id="cityName"
                       value={newCity.name}
-                      onChange={(e) => setNewCity(prev => ({ ...prev, name: e.target.value }))}
+                      onChange={e => {
+                        const value = e.target.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
+                        setNewCity(prev => ({ ...prev, name: value }));
+                      }}
                       placeholder="Lima"
+                      maxLength={15}
                       className="mt-1"
                     />
                   </div>
@@ -494,8 +509,12 @@ const ConfigurationPage = () => {
                     <Input
                       id="cityAddress"
                       value={newCity.address}
-                      onChange={(e) => setNewCity(prev => ({ ...prev, address: e.target.value }))}
+                      onChange={e => {
+                        const value = e.target.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ0-9.,#\s]/g, '');
+                        setNewCity(prev => ({ ...prev, address: value }));
+                      }}
                       placeholder="Terminal Terrestre, Av. Principal 123"
+                      maxLength={40}
                       className="mt-1"
                     />
                   </div>
@@ -538,7 +557,7 @@ const ConfigurationPage = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-between mt-6">
+                {/* <div className="flex justify-between mt-6">
                   <Button
                     variant="outline"
                     onClick={() => setActiveStep(2)}
@@ -557,7 +576,7 @@ const ConfigurationPage = () => {
                   >
                     Guardar
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>

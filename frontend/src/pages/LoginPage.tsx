@@ -111,8 +111,9 @@ const LoginPage = () => {
                     id="email"
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value.replace(/\s/g, ''))}
                     placeholder="tu@correo.com"
+                    maxLength={30}
                     required
                     className="mt-1 pl-10"
                   />
@@ -134,8 +135,9 @@ const LoginPage = () => {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value.replace(/\s/g, ''))}
                     placeholder="••••••••"
+                    maxLength={16}
                     required
                     className="mt-1 pl-10"
                   />
